@@ -6,12 +6,28 @@
 
 #IncludeRegexTransform: 
 
+.././inc/get_next_line.h
+libft.h
+.././inc/libft.h
+
 .././inc/wolf3d.h
+libft.h
+.././inc/libft.h
+get_next_line.h
+.././inc/get_next_line.h
 math.h
 -
 SDL2/SDL.h
 -
 stdio.h
+-
+
+.././libft/libft.h
+string.h
+-
+unistd.h
+-
+stdlib.h
 -
 
 /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c
