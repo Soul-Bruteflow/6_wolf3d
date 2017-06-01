@@ -24,8 +24,11 @@ int	main(int ac, char **av)
 		while(SDL_PollEvent(&event))
 		{
 			if(event.type == SDL_QUIT)
-			{
 				running = false;
+			else if (event.type == SDL_KEYDOWN)
+			{
+				if (event.key.keysym.sym == SDLK_ESCAPE)
+					running = false;
 			}
 		}
 

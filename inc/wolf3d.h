@@ -17,11 +17,27 @@
 # include "get_next_line.h"
 # include <math.h>
 # include <SDL2/SDL.h>
-# include <stdio.h>
 
-typedef enum	e_bool
+typedef enum		e_bool
 {
 	false, true
-}				t_bool;
+}					t_bool;
+
+typedef struct		s_sdl
+{
+	SDL_Window		*window;
+	SDL_Renderer	*renderer;
+	SDL_Texture* 	screen;
+	SDL_Event 		event;
+}					t_sdl;
+
+typedef struct		s_wolf
+{
+	struct s_sdl	*sdl;
+	uint16_t		width;
+	uint16_t		height;
+	uint8_t			input_keys;
+	uint8_t			*pixels;
+}					t_wolf;
 
 #endif
