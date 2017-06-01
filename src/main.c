@@ -6,12 +6,12 @@ int	main(int ac, char **av)
 	SDL_Init(SDL_INIT_VIDEO);
 
 	// Create a SDL window
-	SDL_Window *window = SDL_CreateWindow("Hello, SDL2", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, SDL_WINDOW_OPENGL);
+	SDL_Window *window = SDL_CreateWindow("Hello, SDL2", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_OPENGL);
 
 	// Create a renderer (accelerated and in sync with the display refresh rate)
 	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
-	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	int running = 1;
 	SDL_Event event;
 	while(running)
