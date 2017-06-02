@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wolf3d.dir/src/main.c.o"
+  "CMakeFiles/wolf3d.dir/src/sdl_run.c.o"
   "wolf3d.pdb"
   "wolf3d"
 )

@@ -6,255 +6,255 @@
 
 #IncludeRegexTransform: 
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_atoi.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_atoi.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_bzero.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_bzero.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_count_words.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_count_words.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_count_words_size.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_count_words_size.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isalnum.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isalnum.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isalpha.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isalpha.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isascii.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isascii.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isblank.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isblank.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isdigit.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isdigit.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isprint.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isprint.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isspace.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isspace.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_itoa.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_itoa.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstadd.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstadd.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstdel.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstdel.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstdelone.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstdelone.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstiter.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstiter.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstmap.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstmap.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstnew.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstnew.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memalloc.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memalloc.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memccpy.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memccpy.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memchr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memchr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memcmp.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memcmp.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memcpy.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memcpy.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memdel.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memdel.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memmove.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memmove.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memset.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memset.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_overlapn.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_overlapn.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putchar.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putchar.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putchar_fd.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putchar_fd.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putendl.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putendl.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putendl_fd.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putendl_fd.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putnbr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putnbr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putnbr_fd.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putnbr_fd.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putstr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putstr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putstr_fd.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putstr_fd.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strcat.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strcat.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strchr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strchr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strclr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strclr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strcmp.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strcmp.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strcpy.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strcpy.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strdel.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strdel.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strdup.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strdup.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strequ.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strequ.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_striter.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_striter.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_striteri.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_striteri.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strjoin.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strjoin.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strlcat.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strlcat.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strlen.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strlen.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strmap.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strmap.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strmapi.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strmapi.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strncat.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strncat.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strncmp.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strncmp.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strncpy.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strncpy.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strnequ.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strnequ.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strnew.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strnew.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strnstr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strnstr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strrchr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strrchr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strsplit.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strsplit.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strstr.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strstr.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strsub.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strsub.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strtrim.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strtrim.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_tolower.c
+/Users/bruteflow/c_projects/6_wolf3d/libft/ft_tolower.c
 libft.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/libft.h
+/Users/bruteflow/c_projects/6_wolf3d/libft/libft.h
 string.h
 -
 unistd.h

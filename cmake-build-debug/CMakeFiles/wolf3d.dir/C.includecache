@@ -19,8 +19,6 @@ math.h
 -
 SDL2/SDL.h
 -
-stdio.h
--
 
 .././libft/libft.h
 string.h
@@ -30,7 +28,9 @@ unistd.h
 stdlib.h
 -
 
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c
+/Users/bruteflow/c_projects/6_wolf3d/src/main.c
 wolf3d.h
-/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf3d.h
+/Users/bruteflow/c_projects/6_wolf3d/src/wolf3d.h
+
+/Users/bruteflow/c_projects/6_wolf3d/src/sdl_run.c
 

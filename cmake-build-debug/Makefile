@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/2016/m/mvlad/cprojects/6_wolf3d
+CMAKE_SOURCE_DIR = /Users/bruteflow/c_projects/6_wolf3d
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1837,6 +1837,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/sdl_run.o: src/sdl_run.c.o
+
+.PHONY : src/sdl_run.o
+
+# target to build an object file
+src/sdl_run.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sdl_run.c.o
+.PHONY : src/sdl_run.c.o
+
+src/sdl_run.i: src/sdl_run.c.i
+
+.PHONY : src/sdl_run.i
+
+# target to preprocess a source file
+src/sdl_run.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sdl_run.c.i
+.PHONY : src/sdl_run.c.i
+
+src/sdl_run.s: src/sdl_run.c.s
+
+.PHONY : src/sdl_run.s
+
+# target to generate assembly for a file
+src/sdl_run.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sdl_run.c.s
+.PHONY : src/sdl_run.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2036,6 +2063,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sdl_run.o"
+	@echo "... src/sdl_run.i"
+	@echo "... src/sdl_run.s"
 .PHONY : help
 
 

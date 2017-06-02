@@ -6,3 +6,5 @@ CMakeFiles/wolf3d.dir/src/main.c.o: .././inc/wolf3d.h
 CMakeFiles/wolf3d.dir/src/main.c.o: .././libft/libft.h
 CMakeFiles/wolf3d.dir/src/main.c.o: ../src/main.c
 
+CMakeFiles/wolf3d.dir/src/sdl_run.c.o: ../src/sdl_run.c
+

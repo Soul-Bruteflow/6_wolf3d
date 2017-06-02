@@ -5,4 +5,6 @@ CMakeFiles/wolf3d.dir/src/main.c.o
  .././inc/get_next_line.h
  .././inc/wolf3d.h
  .././libft/libft.h
- /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c
+ /Users/bruteflow/c_projects/6_wolf3d/src/main.c
+CMakeFiles/wolf3d.dir/src/sdl_run.c.o
+ /Users/bruteflow/c_projects/6_wolf3d/src/sdl_run.c
