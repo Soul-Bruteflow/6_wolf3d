@@ -6,5 +6,5 @@ C_FLAGS = -I ./inc -I frameworks/SDL2.framework/Versions/A/Headers -F /Users/bru
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/bruteflow/c_projects/6_wolf3d/./libft -I/Users/bruteflow/c_projects/6_wolf3d/./inc 
+C_INCLUDES = -I/nfs/2016/m/mvlad/cprojects/6_wolf3d/./libft -I/nfs/2016/m/mvlad/cprojects/6_wolf3d/./inc 
 

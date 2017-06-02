@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/bruteflow/c_projects/6_wolf3d/src/main.c" "/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/main.c.o"
-  "/Users/bruteflow/c_projects/6_wolf3d/src/sdl_run.c" "/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/sdl_run.c.o"
+  "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/main.c.o"
+  "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/sdl_run.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/sdl_run.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
@@ -17,7 +17,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles/ft.dir/DependInfo.cmake"
+  "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/ft.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

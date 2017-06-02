@@ -1,29 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sdl_run.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/06/02 11:18:23 by mvlad             #+#    #+#             */
+/*   Updated: 2017/06/02 11:18:26 by mvlad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "wolf3d.h"
 
-bool done(bool quit_if_esc, bool delay) //delay makes CPU have some free time, use once per frame to avoid 100% usage of a CPU core
+void	read_keys(SDL_Event *event, Uint8 *input_keys)
 {
-	if(delay) SDL_Delay(5); //so it consumes less processing power
-	int done = 0;
-	if(!SDL_PollEvent(&event)) return 0;
-	readKeys();
-	if(quit_if_esc && inkeys[SDLK_ESCAPE]) done = 1;
-	if(event.type == SDL_QUIT) done = 1;
-	return done;
+	SDL_PollEvent(event);
+	input_keys = SDL_GetKeyboardState(NULL);
 }
 
-void readKeys()
+t_bool	key_is_down(Uint8 key, uint8_t *input_keys)
 {
-	SDL_PollEvent(&event);
-	inkeys = SDL_GetKeyState(NULL);
+	if (input_keys[key] != 0)
+		return (true);
+	return (false);
 }
 
-t_bool	running(void)
+t_bool	running(SDL_Event event, Uint8 *input_keys)
 {
-	t_bool	running;
-
-	running = true;
 	SDL_Delay(5);
-	if(!SDL_PollEvent(&event))
-		return 0;
-	readKeys();
+	if (!SDL_PollEvent(&event))
+		return (true);
+	read_keys(&event, input_keys);
+	if(input_keys[SDL_SCANCODE_ESCAPE])
+		return (false);
+	if(event.type == SDL_QUIT)
+		return (false);
+	return (true);
 }

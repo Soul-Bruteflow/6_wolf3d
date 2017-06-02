@@ -1,7 +1,15 @@
 #include "wolf3d.h"
 
+const Uint8		*key_state;
+
 int	main(int ac, char **av)
 {
+	t_wolf *wolf;
+
+	wolf = (t_wolf*)malloc(sizeof(t_wolf));
+	wolf->key_state = (const Uint8*)malloc(sizeof(const Uint8));
+	wolf->pixels = (Uint8*)malloc(sizeof(Uint8) * 800 * 600 * 4);
+	wolf->sdl = (t_sdl*)malloc(sizeof(t_sdl));
 	// Initialize SDL
 	SDL_Init(SDL_INIT_VIDEO);
 
@@ -13,8 +21,8 @@ int	main(int ac, char **av)
 
 	SDL_Texture* texture = SDL_CreateTexture (renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, 800, 600);
 
-	unsigned char *pixels;
-	pixels = malloc(sizeof(pixels) * 800 * 600 * 4);
+//	unsigned char *pixels;
+//	pixels = malloc(sizeof(pixels) * 800 * 600 * 4);
 
 	t_bool running = true;
 	SDL_Event event;
@@ -25,11 +33,11 @@ int	main(int ac, char **av)
 		{
 			if(event.type == SDL_QUIT)
 				running = false;
-			else if (event.type == SDL_KEYDOWN)
-			{
-				if (event.key.keysym.sym == SDLK_ESCAPE)
-					running = false;
-			}
+		}
+		wolf->key_state = SDL_GetKeyboardState(NULL);
+		if (wolf->key_state[SDL_SCANCODE_ESCAPE])
+		{
+				running = false;
 		}
 
 		// Clear screen
@@ -46,14 +54,14 @@ int	main(int ac, char **av)
 			const unsigned int y = rand() % 600;
 
 			const unsigned int offset = ( 800 * 4 * y ) + x * 4;
-			pixels[ offset + 0 ] = rand() % 256;        // b
-			pixels[ offset + 1 ] = rand() % 256;        // g
-			pixels[ offset + 2 ] = rand() % 256;        // r
-			pixels[ offset + 3 ] = SDL_ALPHA_OPAQUE;    // a
+			wolf->pixels[ offset + 0 ] = rand() % 256;        // b
+			wolf->pixels[ offset + 1 ] = rand() % 256;        // g
+			wolf->pixels[ offset + 2 ] = rand() % 256;        // r
+			wolf->pixels[ offset + 3 ] = SDL_ALPHA_OPAQUE;    // a
 		}
 
 		// Show what was drawn
-		SDL_UpdateTexture(texture, NULL, &pixels[0], 800 * 4);
+		SDL_UpdateTexture(texture, NULL, &wolf->pixels[0], 800 * 4);
 		SDL_RenderCopy(renderer, texture, NULL, NULL);
 		SDL_RenderPresent(renderer);
 	}

@@ -27,17 +27,19 @@ typedef struct		s_sdl
 {
 	SDL_Window		*window;
 	SDL_Renderer	*renderer;
-	SDL_Texture* 	screen;
-	SDL_Event 		event;
+	SDL_Texture		*screen;
+	SDL_Event		event;
 }					t_sdl;
 
 typedef struct		s_wolf
 {
 	struct s_sdl	*sdl;
-	uint16_t		width;
-	uint16_t		height;
-	uint8_t			input_keys;
-	uint8_t			*pixels;
+	Uint16			width;
+	Uint16			height;
+	const Uint8		*key_state;
+	Uint8			*pixels;
 }					t_wolf;
+
+t_bool				running(SDL_Event event, Uint8 *input_keys);
 
 #endif
