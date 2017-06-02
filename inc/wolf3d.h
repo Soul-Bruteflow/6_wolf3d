@@ -40,6 +40,6 @@ typedef struct		s_wolf
 	Uint8			*pixels;
 }					t_wolf;
 
-t_bool				running(SDL_Event event, Uint8 *input_keys);
+t_bool				running(SDL_Event *event, const Uint8 *input_keys);
 
 #endif
