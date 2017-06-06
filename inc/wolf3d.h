@@ -37,7 +37,7 @@ typedef struct		s_wolf
 	Uint16			width;
 	Uint16			height;
 	const Uint8		*key_state;
-	Uint8			*pixels;
+	Uint8			*draw_buffer;
 }					t_wolf;
 
 t_bool				running(SDL_Event *event, const Uint8 *input_keys);

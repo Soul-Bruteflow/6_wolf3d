@@ -10,7 +10,7 @@ int	main(int ac, char **av)
 	wolf->key_state = (const Uint8*)malloc(sizeof(const Uint8));
 	wolf->width = 800;
 	wolf->height = 600;
-	wolf->pixels = (Uint8*)malloc(sizeof(Uint8) * wolf->width * wolf->height * 4);
+	wolf->draw_buffer = (Uint8*)malloc(sizeof(Uint8) * wolf->width * wolf->height * 4);
 	wolf->sdl = (t_sdl*)malloc(sizeof(t_sdl));
 
 	wolf->sdl->window = (SDL_Window*)malloc(sizeof(wolf->sdl->window));
@@ -60,14 +60,14 @@ int	main(int ac, char **av)
 			const unsigned int y = rand() % 600;
 
 			const unsigned int offset = ( 800 * 4 * y ) + x * 4;
-			wolf->pixels[ offset + 0 ] = rand() % 256;        // b
-			wolf->pixels[ offset + 1 ] = rand() % 256;        // g
-			wolf->pixels[ offset + 2 ] = rand() % 256;        // r
-			wolf->pixels[ offset + 3 ] = SDL_ALPHA_OPAQUE;    // a
+			wolf->draw_buffer[ offset + 0 ] = rand() % 256;        // b
+			wolf->draw_buffer[ offset + 1 ] = rand() % 256;        // g
+			wolf->draw_buffer[ offset + 2 ] = rand() % 256;        // r
+			wolf->draw_buffer[ offset + 3 ] = SDL_ALPHA_OPAQUE;    // a
 		}
 
 		// Show what was drawn
-		SDL_UpdateTexture(wolf->sdl->screen, NULL, &wolf->pixels[0], 800 * 4);
+		SDL_UpdateTexture(wolf->sdl->screen, NULL, &wolf->draw_buffer[0], 800 * 4);
 		SDL_RenderCopy(wolf->sdl->renderer, wolf->sdl->screen, NULL, NULL);
 		SDL_RenderPresent(wolf->sdl->renderer);
 	}

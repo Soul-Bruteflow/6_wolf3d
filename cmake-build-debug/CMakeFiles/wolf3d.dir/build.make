@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/2016/m/mvlad/cprojects/6_wolf3d
+CMAKE_SOURCE_DIR = /Users/bruteflow/c_projects/6_wolf3d
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/wolf3d.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/wolf3d.dir/flags.make
 
 CMakeFiles/wolf3d.dir/src/main.c.o: CMakeFiles/wolf3d.dir/flags.make
 CMakeFiles/wolf3d.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/wolf3d.dir/src/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/main.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/wolf3d.dir/src/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/main.c.o   -c /Users/bruteflow/c_projects/6_wolf3d/src/main.c
 
 CMakeFiles/wolf3d.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wolf3d.dir/src/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c > CMakeFiles/wolf3d.dir/src/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bruteflow/c_projects/6_wolf3d/src/main.c > CMakeFiles/wolf3d.dir/src/main.c.i
 
 CMakeFiles/wolf3d.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wolf3d.dir/src/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c -o CMakeFiles/wolf3d.dir/src/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bruteflow/c_projects/6_wolf3d/src/main.c -o CMakeFiles/wolf3d.dir/src/main.c.s
 
 CMakeFiles/wolf3d.dir/src/main.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/wolf3d.dir/src/main.c.o.provides.build: CMakeFiles/wolf3d.dir/src/mai
 
 CMakeFiles/wolf3d.dir/src/sdl_run.c.o: CMakeFiles/wolf3d.dir/flags.make
 CMakeFiles/wolf3d.dir/src/sdl_run.c.o: ../src/sdl_run.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/wolf3d.dir/src/sdl_run.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/sdl_run.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/sdl_run.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/wolf3d.dir/src/sdl_run.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/sdl_run.c.o   -c /Users/bruteflow/c_projects/6_wolf3d/src/sdl_run.c
 
 CMakeFiles/wolf3d.dir/src/sdl_run.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wolf3d.dir/src/sdl_run.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/sdl_run.c > CMakeFiles/wolf3d.dir/src/sdl_run.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bruteflow/c_projects/6_wolf3d/src/sdl_run.c > CMakeFiles/wolf3d.dir/src/sdl_run.c.i
 
 CMakeFiles/wolf3d.dir/src/sdl_run.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wolf3d.dir/src/sdl_run.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/sdl_run.c -o CMakeFiles/wolf3d.dir/src/sdl_run.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bruteflow/c_projects/6_wolf3d/src/sdl_run.c -o CMakeFiles/wolf3d.dir/src/sdl_run.c.s
 
 CMakeFiles/wolf3d.dir/src/sdl_run.c.o.requires:
 
@@ -118,7 +118,7 @@ wolf3d: CMakeFiles/wolf3d.dir/src/sdl_run.c.o
 wolf3d: CMakeFiles/wolf3d.dir/build.make
 wolf3d: libft.a
 wolf3d: CMakeFiles/wolf3d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable wolf3d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable wolf3d"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wolf3d.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -136,6 +136,6 @@ CMakeFiles/wolf3d.dir/clean:
 .PHONY : CMakeFiles/wolf3d.dir/clean
 
 CMakeFiles/wolf3d.dir/depend:
-	cd /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nfs/2016/m/mvlad/cprojects/6_wolf3d /nfs/2016/m/mvlad/cprojects/6_wolf3d /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bruteflow/c_projects/6_wolf3d /Users/bruteflow/c_projects/6_wolf3d /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/wolf3d.dir/depend
 

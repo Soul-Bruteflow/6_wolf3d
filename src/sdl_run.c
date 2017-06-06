@@ -14,7 +14,7 @@
 
 t_bool	running(SDL_Event *event, const Uint8 *key_state)
 {
-	SDL_Delay(5);
+	SDL_Delay(1);
 	SDL_PollEvent(event);
 	if(event->type == SDL_QUIT)
 		return (false);
