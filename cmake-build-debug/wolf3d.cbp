@@ -8,45 +8,46 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug"/>
+				<Option working_dir="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug"/>
+				<Option working_dir="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug"/>
+				<Option working_dir="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft">
-				<Option output="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/libft.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug"/>
+				<Option output="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/libft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./libft"/>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./inc"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./libft"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./inc"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
@@ -54,22 +55,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft/fast">
-				<Option output="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/libft.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug"/>
+				<Option output="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/libft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./libft"/>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./inc"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./libft"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./inc"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
@@ -77,22 +79,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="wolf3d">
-				<Option output="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug"/>
+				<Option output="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./libft"/>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./inc"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./libft"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./inc"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
@@ -100,22 +103,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="wolf3d/fast">
-				<Option output="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug"/>
+				<Option output="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/wolf3d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./libft"/>
-					<Add directory="/Users/bruteflow/c_projects/6_wolf3d/./inc"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./libft"/>
+					<Add directory="/nfs/2016/m/mvlad/cprojects/6_wolf3d/./inc"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
@@ -123,209 +127,215 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 wolf3d/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_atoi.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_atoi.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_bzero.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_bzero.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_count_words.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_count_words.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_count_words_size.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_count_words_size.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isalnum.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isalnum.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isalpha.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isalpha.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isascii.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isascii.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isblank.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isblank.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isdigit.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isdigit.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isprint.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isprint.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_isspace.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_isspace.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_itoa.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_itoa.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstadd.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstadd.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstdel.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstdel.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstdelone.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstdelone.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstiter.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstiter.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstmap.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstmap.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_lstnew.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_lstnew.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memalloc.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memalloc.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memccpy.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memccpy.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memchr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memchr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memcmp.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memcmp.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memcpy.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memcpy.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memdel.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memdel.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memmove.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memmove.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_memset.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_memset.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_overlapn.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_overlapn.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putchar.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putchar.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putchar_fd.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putchar_fd.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putendl.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putendl.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putendl_fd.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putendl_fd.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putnbr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putnbr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putnbr_fd.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putnbr_fd.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putstr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putstr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_putstr_fd.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_putstr_fd.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strcat.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strcat.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strchr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strchr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strclr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strclr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strcmp.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strcmp.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strcpy.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strcpy.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strdel.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strdel.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strdup.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strdup.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strequ.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strequ.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_striter.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_striter.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_striteri.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_striteri.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strjoin.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strjoin.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strlcat.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strlcat.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strlen.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strlen.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strmap.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strmap.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strmapi.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strmapi.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strncat.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strncat.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strncmp.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strncmp.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strncpy.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strncpy.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strnequ.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strnequ.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strnew.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strnew.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strnstr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strnstr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strrchr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strrchr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strsplit.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strsplit.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strstr.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strstr.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strsub.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strsub.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_strtrim.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_strtrim.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/libft/ft_tolower.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_tolower.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/src/main.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/game_loop.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/src/sdl_run.c">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c">
 			<Option target="wolf3d"/>
 		</Unit>
-		<Unit filename="/Users/bruteflow/c_projects/6_wolf3d/CMakeLists.txt">
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_init.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_sdl.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

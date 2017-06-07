@@ -7,7 +7,7 @@ set(LIB_PATH libft)
 
 set(HOME_FLAGS "-I ./inc -I frameworks/SDL2.framework/Versions/A/Headers -F /Users/bruteflow/c_projects/6_wolf3d/frameworks/ -framework SDL2")
 set(MACOS_FLAGS "-I ./inc -I ./frameworks/SDL2/Versions/A/Headers -F ./frameworks -framework SDL2")
-set(CMAKE_C_FLAGS ${HOME_FLAGS})
+set(CMAKE_C_FLAGS ${MACOS_FLAGS})
 set(SOURCE_FILES ${SOURCES})
 include_directories("./libft/" "./inc")
 add_executable(wolf3d ${SOURCE_FILES})

@@ -40,6 +40,14 @@ typedef struct		s_wolf
 	Uint8			*draw_buffer;
 }					t_wolf;
 
+t_wolf				*wolf_init(t_wolf *w);
+void				wolf_init_sdl(t_wolf *w);
+
+void				quit(t_wolf *wolf);
+void				screen_clear(t_wolf *wolf);
+void				screen_update(t_wolf *wolf);
+
+void				game_loop(t_wolf *wolf);
 t_bool				running(SDL_Event *event, const Uint8 *input_keys);
 
 #endif

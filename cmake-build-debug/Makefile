@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bruteflow/c_projects/6_wolf3d
+CMAKE_SOURCE_DIR = /nfs/2016/m/mvlad/cprojects/6_wolf3d
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug
+CMAKE_BINARY_DIR = /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bruteflow/c_projects/6_wolf3d/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1810,6 +1810,33 @@ libft/ft_tolower.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/ft_tolower.c.s
 .PHONY : libft/ft_tolower.c.s
 
+src/game_loop.o: src/game_loop.c.o
+
+.PHONY : src/game_loop.o
+
+# target to build an object file
+src/game_loop.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/game_loop.c.o
+.PHONY : src/game_loop.c.o
+
+src/game_loop.i: src/game_loop.c.i
+
+.PHONY : src/game_loop.i
+
+# target to preprocess a source file
+src/game_loop.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/game_loop.c.i
+.PHONY : src/game_loop.c.i
+
+src/game_loop.s: src/game_loop.c.s
+
+.PHONY : src/game_loop.s
+
+# target to generate assembly for a file
+src/game_loop.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/game_loop.c.s
+.PHONY : src/game_loop.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -1837,32 +1864,59 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/sdl_run.o: src/sdl_run.c.o
+src/wolf_init.o: src/wolf_init.c.o
 
-.PHONY : src/sdl_run.o
+.PHONY : src/wolf_init.o
 
 # target to build an object file
-src/sdl_run.c.o:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sdl_run.c.o
-.PHONY : src/sdl_run.c.o
+src/wolf_init.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_init.c.o
+.PHONY : src/wolf_init.c.o
 
-src/sdl_run.i: src/sdl_run.c.i
+src/wolf_init.i: src/wolf_init.c.i
 
-.PHONY : src/sdl_run.i
+.PHONY : src/wolf_init.i
 
 # target to preprocess a source file
-src/sdl_run.c.i:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sdl_run.c.i
-.PHONY : src/sdl_run.c.i
+src/wolf_init.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_init.c.i
+.PHONY : src/wolf_init.c.i
 
-src/sdl_run.s: src/sdl_run.c.s
+src/wolf_init.s: src/wolf_init.c.s
 
-.PHONY : src/sdl_run.s
+.PHONY : src/wolf_init.s
 
 # target to generate assembly for a file
-src/sdl_run.c.s:
-	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/sdl_run.c.s
-.PHONY : src/sdl_run.c.s
+src/wolf_init.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_init.c.s
+.PHONY : src/wolf_init.c.s
+
+src/wolf_sdl.o: src/wolf_sdl.c.o
+
+.PHONY : src/wolf_sdl.o
+
+# target to build an object file
+src/wolf_sdl.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o
+.PHONY : src/wolf_sdl.c.o
+
+src/wolf_sdl.i: src/wolf_sdl.c.i
+
+.PHONY : src/wolf_sdl.i
+
+# target to preprocess a source file
+src/wolf_sdl.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_sdl.c.i
+.PHONY : src/wolf_sdl.c.i
+
+src/wolf_sdl.s: src/wolf_sdl.c.s
+
+.PHONY : src/wolf_sdl.s
+
+# target to generate assembly for a file
+src/wolf_sdl.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_sdl.c.s
+.PHONY : src/wolf_sdl.c.s
 
 # Help Target
 help:
@@ -2060,12 +2114,18 @@ help:
 	@echo "... libft/ft_tolower.o"
 	@echo "... libft/ft_tolower.i"
 	@echo "... libft/ft_tolower.s"
+	@echo "... src/game_loop.o"
+	@echo "... src/game_loop.i"
+	@echo "... src/game_loop.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/sdl_run.o"
-	@echo "... src/sdl_run.i"
-	@echo "... src/sdl_run.s"
+	@echo "... src/wolf_init.o"
+	@echo "... src/wolf_init.i"
+	@echo "... src/wolf_init.s"
+	@echo "... src/wolf_sdl.o"
+	@echo "... src/wolf_sdl.i"
+	@echo "... src/wolf_sdl.s"
 .PHONY : help
 
 
