@@ -6,7 +6,11 @@ int	main(int ac, char **av)
 
 	wolf = NULL;
 	wolf = wolf_init(wolf);
-	create_screen(wolf, 800, 600, "wolf3d");
+	wolf->height = 800;
+	wolf->width = 600;
+	wolf->win_title = ft_strdup("wolf3d, \0");
+	wolf->win_title_update = NULL;
+	create_screen(wolf, wolf->height, wolf->width);
 	game_loop(wolf);
 	quit(wolf);
 	return (0);
