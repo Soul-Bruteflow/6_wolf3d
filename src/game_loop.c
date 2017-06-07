@@ -17,18 +17,7 @@ void	game_loop(t_wolf *wolf)
 	while((running(&wolf->sdl->event, wolf->key_state)))
 	{
 		screen_clear(wolf);
-		// Draw
-		for( unsigned int i = 0; i < 1000; i++ )
-		{
-			const unsigned int x = rand() % 800;
-			const unsigned int y = rand() % 600;
-
-			const unsigned int offset = ( 800 * 4 * y ) + x * 4;
-			wolf->draw_buffer[ offset + 0 ] = rand() % 256;        // b
-			wolf->draw_buffer[ offset + 1 ] = rand() % 256;        // g
-			wolf->draw_buffer[ offset + 2 ] = rand() % 256;        // r
-			wolf->draw_buffer[ offset + 3 ] = SDL_ALPHA_OPAQUE;    // a
-		}
+		ft_noise(wolf);
 		screen_update(wolf);
 	}
 }

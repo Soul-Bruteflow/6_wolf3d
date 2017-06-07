@@ -18,6 +18,12 @@
 # include <math.h>
 # include <SDL2/SDL.h>
 
+# define MALLOCK_ERROR 0
+# define INIT_ERROR 1
+# define WINDOW_ERROR 2
+# define RENDERER_ERROR 3
+# define TEXTURE_ERROR 4
+
 typedef enum		e_bool
 {
 	false, true
@@ -41,7 +47,11 @@ typedef struct		s_wolf
 }					t_wolf;
 
 t_wolf				*wolf_init(t_wolf *w);
-void				wolf_init_sdl(t_wolf *w);
+void				create_screen(t_wolf *w, Uint16 wdth,
+					Uint16 hght, const char *win_name);
+void				create_buffer(Uint8 **draw_buffer, Uint16 width,
+					Uint16 height);
+void				screen_size(t_wolf *w, Uint16 width, Uint16 height);
 
 void				quit(t_wolf *wolf);
 void				screen_clear(t_wolf *wolf);
@@ -49,5 +59,9 @@ void				screen_update(t_wolf *wolf);
 
 void				game_loop(t_wolf *wolf);
 t_bool				running(SDL_Event *event, const Uint8 *input_keys);
+
+void				ft_noise(t_wolf *wolf);
+
+void				wolf_error(Uint8 error_code);
 
 #endif

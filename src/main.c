@@ -6,7 +6,7 @@ int	main(int ac, char **av)
 
 	wolf = NULL;
 	wolf = wolf_init(wolf);
-	wolf_init_sdl(wolf);
+	create_screen(wolf, 800, 600, "wolf3d");
 	game_loop(wolf);
 	quit(wolf);
 	return (0);

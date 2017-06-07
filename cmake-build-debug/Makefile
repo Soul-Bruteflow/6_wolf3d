@@ -1810,6 +1810,33 @@ libft/ft_tolower.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/ft_tolower.c.s
 .PHONY : libft/ft_tolower.c.s
 
+src/ft_noise.o: src/ft_noise.c.o
+
+.PHONY : src/ft_noise.o
+
+# target to build an object file
+src/ft_noise.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/ft_noise.c.o
+.PHONY : src/ft_noise.c.o
+
+src/ft_noise.i: src/ft_noise.c.i
+
+.PHONY : src/ft_noise.i
+
+# target to preprocess a source file
+src/ft_noise.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/ft_noise.c.i
+.PHONY : src/ft_noise.c.i
+
+src/ft_noise.s: src/ft_noise.c.s
+
+.PHONY : src/ft_noise.s
+
+# target to generate assembly for a file
+src/ft_noise.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/ft_noise.c.s
+.PHONY : src/ft_noise.c.s
+
 src/game_loop.o: src/game_loop.c.o
 
 .PHONY : src/game_loop.o
@@ -1864,6 +1891,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/wolf_error.o: src/wolf_error.c.o
+
+.PHONY : src/wolf_error.o
+
+# target to build an object file
+src/wolf_error.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_error.c.o
+.PHONY : src/wolf_error.c.o
+
+src/wolf_error.i: src/wolf_error.c.i
+
+.PHONY : src/wolf_error.i
+
+# target to preprocess a source file
+src/wolf_error.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_error.c.i
+.PHONY : src/wolf_error.c.i
+
+src/wolf_error.s: src/wolf_error.c.s
+
+.PHONY : src/wolf_error.s
+
+# target to generate assembly for a file
+src/wolf_error.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_error.c.s
+.PHONY : src/wolf_error.c.s
+
 src/wolf_init.o: src/wolf_init.c.o
 
 .PHONY : src/wolf_init.o
@@ -1890,6 +1944,33 @@ src/wolf_init.s: src/wolf_init.c.s
 src/wolf_init.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_init.c.s
 .PHONY : src/wolf_init.c.s
+
+src/wolf_screen.o: src/wolf_screen.c.o
+
+.PHONY : src/wolf_screen.o
+
+# target to build an object file
+src/wolf_screen.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_screen.c.o
+.PHONY : src/wolf_screen.c.o
+
+src/wolf_screen.i: src/wolf_screen.c.i
+
+.PHONY : src/wolf_screen.i
+
+# target to preprocess a source file
+src/wolf_screen.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_screen.c.i
+.PHONY : src/wolf_screen.c.i
+
+src/wolf_screen.s: src/wolf_screen.c.s
+
+.PHONY : src/wolf_screen.s
+
+# target to generate assembly for a file
+src/wolf_screen.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/wolf_screen.c.s
+.PHONY : src/wolf_screen.c.s
 
 src/wolf_sdl.o: src/wolf_sdl.c.o
 
@@ -2114,15 +2195,24 @@ help:
 	@echo "... libft/ft_tolower.o"
 	@echo "... libft/ft_tolower.i"
 	@echo "... libft/ft_tolower.s"
+	@echo "... src/ft_noise.o"
+	@echo "... src/ft_noise.i"
+	@echo "... src/ft_noise.s"
 	@echo "... src/game_loop.o"
 	@echo "... src/game_loop.i"
 	@echo "... src/game_loop.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/wolf_error.o"
+	@echo "... src/wolf_error.i"
+	@echo "... src/wolf_error.s"
 	@echo "... src/wolf_init.o"
 	@echo "... src/wolf_init.i"
 	@echo "... src/wolf_init.s"
+	@echo "... src/wolf_screen.o"
+	@echo "... src/wolf_screen.i"
+	@echo "... src/wolf_screen.s"
 	@echo "... src/wolf_sdl.o"
 	@echo "... src/wolf_sdl.i"
 	@echo "... src/wolf_sdl.s"

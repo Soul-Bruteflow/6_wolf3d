@@ -323,13 +323,22 @@
 		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/libft/ft_tolower.c">
 			<Option target="ft"/>
 		</Unit>
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/ft_noise.c">
+			<Option target="wolf3d"/>
+		</Unit>
 		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/game_loop.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c">
 			<Option target="wolf3d"/>
 		</Unit>
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_error.c">
+			<Option target="wolf3d"/>
+		</Unit>
 		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_init.c">
+			<Option target="wolf3d"/>
+		</Unit>
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_screen.c">
 			<Option target="wolf3d"/>
 		</Unit>
 		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_sdl.c">
