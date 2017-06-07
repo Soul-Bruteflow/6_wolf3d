@@ -329,6 +329,9 @@
 		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/game_loop.c">
 			<Option target="wolf3d"/>
 		</Unit>
+		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/keyboard_events.c">
+			<Option target="wolf3d"/>
+		</Unit>
 		<Unit filename="/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c">
 			<Option target="wolf3d"/>
 		</Unit>

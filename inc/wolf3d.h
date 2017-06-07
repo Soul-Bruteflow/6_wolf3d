@@ -58,10 +58,12 @@ void				screen_clear(t_wolf *wolf);
 void				screen_update(t_wolf *wolf);
 
 void				game_loop(t_wolf *wolf);
-t_bool				running(SDL_Event *event, const Uint8 *input_keys);
+t_bool				running(SDL_Event *event, const Uint8 **input_keys);
 
 void				ft_noise(t_wolf *wolf);
 
 void				wolf_error(Uint8 error_code);
+
+void				keyboard_events(t_wolf *w);
 
 #endif

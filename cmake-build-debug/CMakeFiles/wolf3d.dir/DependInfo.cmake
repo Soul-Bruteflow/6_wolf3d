@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/ft_noise.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/ft_noise.c.o"
   "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/game_loop.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/game_loop.c.o"
+  "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/keyboard_events.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/keyboard_events.c.o"
   "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/main.c.o"
   "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_error.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/wolf_error.c.o"
   "/nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_init.c" "/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles/wolf3d.dir/src/wolf_init.c.o"

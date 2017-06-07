@@ -11,6 +11,11 @@ CMakeFiles/wolf3d.dir/src/game_loop.c.o: .././inc/wolf3d.h
 CMakeFiles/wolf3d.dir/src/game_loop.c.o: .././libft/libft.h
 CMakeFiles/wolf3d.dir/src/game_loop.c.o: ../src/game_loop.c
 
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o: .././inc/get_next_line.h
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o: .././inc/wolf3d.h
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o: .././libft/libft.h
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o: ../src/keyboard_events.c
+
 CMakeFiles/wolf3d.dir/src/main.c.o: .././inc/get_next_line.h
 CMakeFiles/wolf3d.dir/src/main.c.o: .././inc/wolf3d.h
 CMakeFiles/wolf3d.dir/src/main.c.o: .././libft/libft.h

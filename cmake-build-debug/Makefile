@@ -1864,6 +1864,33 @@ src/game_loop.c.s:
 	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/game_loop.c.s
 .PHONY : src/game_loop.c.s
 
+src/keyboard_events.o: src/keyboard_events.c.o
+
+.PHONY : src/keyboard_events.o
+
+# target to build an object file
+src/keyboard_events.c.o:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/keyboard_events.c.o
+.PHONY : src/keyboard_events.c.o
+
+src/keyboard_events.i: src/keyboard_events.c.i
+
+.PHONY : src/keyboard_events.i
+
+# target to preprocess a source file
+src/keyboard_events.c.i:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/keyboard_events.c.i
+.PHONY : src/keyboard_events.c.i
+
+src/keyboard_events.s: src/keyboard_events.c.s
+
+.PHONY : src/keyboard_events.s
+
+# target to generate assembly for a file
+src/keyboard_events.c.s:
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/keyboard_events.c.s
+.PHONY : src/keyboard_events.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -2201,6 +2228,9 @@ help:
 	@echo "... src/game_loop.o"
 	@echo "... src/game_loop.i"
 	@echo "... src/game_loop.s"
+	@echo "... src/keyboard_events.o"
+	@echo "... src/keyboard_events.i"
+	@echo "... src/keyboard_events.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -105,9 +105,33 @@ CMakeFiles/wolf3d.dir/src/game_loop.c.o.provides: CMakeFiles/wolf3d.dir/src/game
 CMakeFiles/wolf3d.dir/src/game_loop.c.o.provides.build: CMakeFiles/wolf3d.dir/src/game_loop.c.o
 
 
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o: CMakeFiles/wolf3d.dir/flags.make
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o: ../src/keyboard_events.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/wolf3d.dir/src/keyboard_events.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/keyboard_events.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/keyboard_events.c
+
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wolf3d.dir/src/keyboard_events.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/keyboard_events.c > CMakeFiles/wolf3d.dir/src/keyboard_events.c.i
+
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wolf3d.dir/src/keyboard_events.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/keyboard_events.c -o CMakeFiles/wolf3d.dir/src/keyboard_events.c.s
+
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.requires:
+
+.PHONY : CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.requires
+
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.provides: CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.requires
+	$(MAKE) -f CMakeFiles/wolf3d.dir/build.make CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.provides.build
+.PHONY : CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.provides
+
+CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.provides.build: CMakeFiles/wolf3d.dir/src/keyboard_events.c.o
+
+
 CMakeFiles/wolf3d.dir/src/main.c.o: CMakeFiles/wolf3d.dir/flags.make
 CMakeFiles/wolf3d.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/wolf3d.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/wolf3d.dir/src/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/main.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/main.c
 
 CMakeFiles/wolf3d.dir/src/main.c.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/wolf3d.dir/src/main.c.o.provides.build: CMakeFiles/wolf3d.dir/src/mai
 
 CMakeFiles/wolf3d.dir/src/wolf_error.c.o: CMakeFiles/wolf3d.dir/flags.make
 CMakeFiles/wolf3d.dir/src/wolf_error.c.o: ../src/wolf_error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/wolf3d.dir/src/wolf_error.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/wolf3d.dir/src/wolf_error.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/wolf_error.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_error.c
 
 CMakeFiles/wolf3d.dir/src/wolf_error.c.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/wolf3d.dir/src/wolf_error.c.o.provides.build: CMakeFiles/wolf3d.dir/s
 
 CMakeFiles/wolf3d.dir/src/wolf_init.c.o: CMakeFiles/wolf3d.dir/flags.make
 CMakeFiles/wolf3d.dir/src/wolf_init.c.o: ../src/wolf_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/wolf3d.dir/src/wolf_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/wolf3d.dir/src/wolf_init.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/wolf_init.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_init.c
 
 CMakeFiles/wolf3d.dir/src/wolf_init.c.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/wolf3d.dir/src/wolf_init.c.o.provides.build: CMakeFiles/wolf3d.dir/sr
 
 CMakeFiles/wolf3d.dir/src/wolf_screen.c.o: CMakeFiles/wolf3d.dir/flags.make
 CMakeFiles/wolf3d.dir/src/wolf_screen.c.o: ../src/wolf_screen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/wolf3d.dir/src/wolf_screen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/wolf3d.dir/src/wolf_screen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/wolf_screen.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_screen.c
 
 CMakeFiles/wolf3d.dir/src/wolf_screen.c.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/wolf3d.dir/src/wolf_screen.c.o.provides.build: CMakeFiles/wolf3d.dir/
 
 CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o: CMakeFiles/wolf3d.dir/flags.make
 CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o: ../src/wolf_sdl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o   -c /nfs/2016/m/mvlad/cprojects/6_wolf3d/src/wolf_sdl.c
 
 CMakeFiles/wolf3d.dir/src/wolf_sdl.c.i: cmake_force
@@ -229,6 +253,7 @@ CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o.provides.build: CMakeFiles/wolf3d.dir/src
 wolf3d_OBJECTS = \
 "CMakeFiles/wolf3d.dir/src/ft_noise.c.o" \
 "CMakeFiles/wolf3d.dir/src/game_loop.c.o" \
+"CMakeFiles/wolf3d.dir/src/keyboard_events.c.o" \
 "CMakeFiles/wolf3d.dir/src/main.c.o" \
 "CMakeFiles/wolf3d.dir/src/wolf_error.c.o" \
 "CMakeFiles/wolf3d.dir/src/wolf_init.c.o" \
@@ -240,6 +265,7 @@ wolf3d_EXTERNAL_OBJECTS =
 
 wolf3d: CMakeFiles/wolf3d.dir/src/ft_noise.c.o
 wolf3d: CMakeFiles/wolf3d.dir/src/game_loop.c.o
+wolf3d: CMakeFiles/wolf3d.dir/src/keyboard_events.c.o
 wolf3d: CMakeFiles/wolf3d.dir/src/main.c.o
 wolf3d: CMakeFiles/wolf3d.dir/src/wolf_error.c.o
 wolf3d: CMakeFiles/wolf3d.dir/src/wolf_init.c.o
@@ -248,7 +274,7 @@ wolf3d: CMakeFiles/wolf3d.dir/src/wolf_sdl.c.o
 wolf3d: CMakeFiles/wolf3d.dir/build.make
 wolf3d: libft.a
 wolf3d: CMakeFiles/wolf3d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable wolf3d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/m/mvlad/cprojects/6_wolf3d/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable wolf3d"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wolf3d.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -258,6 +284,7 @@ CMakeFiles/wolf3d.dir/build: wolf3d
 
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/src/ft_noise.c.o.requires
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/src/game_loop.c.o.requires
+CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/src/keyboard_events.c.o.requires
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/src/main.c.o.requires
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/src/wolf_error.c.o.requires
 CMakeFiles/wolf3d.dir/requires: CMakeFiles/wolf3d.dir/src/wolf_init.c.o.requires
