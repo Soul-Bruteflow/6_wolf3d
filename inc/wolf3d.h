@@ -18,11 +18,30 @@
 # include <math.h>
 # include <SDL2/SDL.h>
 
+/*
+** SDL
+*/
 # define MALLOCK_ERROR 0
 # define INIT_ERROR 1
 # define WINDOW_ERROR 2
 # define RENDERER_ERROR 3
 # define TEXTURE_ERROR 4
+
+/*
+** Parser
+*/
+# define FILE_CLOSE_ERROR 20
+# define FILE_OPEN_ERROR 21
+# define GNL_ERROR 22
+# define EMPTY_MAP_ERROR 23
+# define SMALL_MAP_ERROR 24
+# define BIG_MAP_ERROR 25
+# define LINE_ERROR 26
+
+/*
+** General
+*/
+# define USSAGE_ERROR 40
 
 typedef enum		e_bool
 {
@@ -46,9 +65,17 @@ typedef struct		s_wolf
 	char 			*win_title_update;
 	const Uint8		*key_state;
 	Uint8			*draw_buffer;
-	
+
+	Uint16			map_x;
+	Uint16			map_y;
+	char			*line;
+	int 			fd;
+	Uint16			tmp;
+	char			**av;
+
 	Uint16			map_width;
 	Uint16 			map_height;
+	Uint8			**world_map;
 	float 			pos_x;
 	float 			pos_y;
 	float 			dir_x;
@@ -92,5 +119,15 @@ void				wolf_error(Uint8 error_code);
 ** Keyboard.
 */
 void				get_user_inputs(t_wolf *w);
+/*
+** Parser.
+*/
+void				map_parser(t_wolf *w);
+void				close_file(t_wolf *w);
+void				close_line(t_wolf *w);
+void				open_file(t_wolf *w);
+void				gnl_error(t_wolf *w, int i);
+void				nbr_error(t_wolf *w, Uint16 i);
+
 
 #endif

@@ -24,12 +24,14 @@ void	print_error_and_exit(const char *error_text, Uint8 sdl)
 	}
 	write(1, "\n", 1);
 	SDL_Quit();
-	exit(1);
+	exit(0);
 }
 
 void	wolf_error(Uint8 error_code)
 {
-	if (error_code == MALLOCK_ERROR)
+	if (error_code == USSAGE_ERROR)
+		print_error_and_exit("Usage: ./wolf3d <mapname>", 0);
+	else if (error_code == MALLOCK_ERROR)
 		print_error_and_exit("Mallock allocation error.", 0);
 	else if (error_code == INIT_ERROR)
 		print_error_and_exit("Unable to init SDL. ", 1);
@@ -39,4 +41,13 @@ void	wolf_error(Uint8 error_code)
 		print_error_and_exit("Unable to init Renderer. ", 1);
 	else if (error_code == TEXTURE_ERROR)
 		print_error_and_exit("Unable to init Textue. ", 1);
+	else if (error_code == FILE_CLOSE_ERROR)
+		print_error_and_exit("File close error.", 0);
+	else if (error_code == FILE_OPEN_ERROR)
+		print_error_and_exit("File open error.", 0);
+	else if (error_code == GNL_ERROR)
+		print_error_and_exit("GNL error.", 0);
+	else if (error_code == EMPTY_MAP_ERROR || SMALL_MAP_ERROR || BIG_MAP_ERROR
+			|| LINE_ERROR)
+		print_error_and_exit("Map error.", 0);
 }

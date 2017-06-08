@@ -14,5 +14,5 @@
 
 void	world_render(t_wolf *w)
 {
-
+//	w->world_map = select_map(w, 1);
 }

@@ -14,6 +14,8 @@
 # define __GET_NEXT_LINE_H
 
 # include "libft.h"
+# include <fcntl.h>
+
 # define BUFF_SIZE 1000
 # define PROTECT_N1(x) if (!x) return (-1);
 # define PROTECT_N2(x, z, w) if (x == NULL || z < 0 || w) return (-1);
