@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   wolf_screen.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/06/08 12:26:00 by mvlad             #+#    #+#             */
+/*   Updated: 2017/06/08 12:26:43 by mvlad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "wolf3d.h"
 
 void	wolf_init_title(t_wolf *w, const char *title)
@@ -60,8 +72,9 @@ void	create_screen(t_wolf *w, Uint16 wdth, Uint16 hght, const char *title)
 	screen_size(w, wdth, hght);
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		wolf_error(INIT_ERROR);
-	w->sdl->window = SDL_CreateWindow(w->win_title_update, SDL_WINDOWPOS_CENTERED,
-		SDL_WINDOWPOS_CENTERED, w->width, w->height, SDL_WINDOW_OPENGL);
+	w->sdl->window = SDL_CreateWindow(w->win_title_update,
+			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+			w->width, w->height, SDL_WINDOW_OPENGL);
 	if (w->sdl->window == NULL)
 		wolf_error(WINDOW_ERROR);
 	w->sdl->renderer = SDL_CreateRenderer(w->sdl->window, -1,

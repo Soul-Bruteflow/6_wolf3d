@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   world_render.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/08 12:13:15 by mvlad             #+#    #+#             */
-/*   Updated: 2017/06/08 12:14:44 by mvlad            ###   ########.fr       */
+/*   Created: 2017/06/08 12:29:14 by mvlad             #+#    #+#             */
+/*   Updated: 2017/06/08 12:29:16 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf3d.h"
 
-int	main(int ac, char **av)
+void	world_render(t_wolf *w)
 {
-	t_wolf *wolf;
 
-	wolf = NULL;
-	wolf = wolf_init(wolf, 800, 600, "wolf3d, \0");
-	game_loop(wolf);
-	quit(wolf);
-	return (0);
 }
