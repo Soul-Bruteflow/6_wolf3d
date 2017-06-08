@@ -48,12 +48,16 @@ typedef struct		s_wolf
 	Uint8			*draw_buffer;
 }					t_wolf;
 
-t_wolf				*wolf_init(t_wolf *w);
-void				create_screen(t_wolf *w, Uint16 wdth, Uint16 hght);
+t_wolf				*wolf_init(t_wolf *w, Uint16 width, Uint16 height,
+					const char *title);
+void				create_screen(t_wolf *w, Uint16 wdth, Uint16 hght,
+					const char *title);
 void				create_buffer(Uint8 **draw_buffer, Uint16 width,
 					Uint16 height);
 void				screen_size(t_wolf *w, Uint16 width, Uint16 height);
 void				screen_title(t_wolf *w);
+
+void				wolf_init_title(t_wolf *w, const char *title);
 
 void				quit(t_wolf *wolf);
 void				screen_clear(t_wolf *wolf);

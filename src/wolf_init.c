@@ -12,12 +12,7 @@
 
 #include "wolf3d.h"
 
-void	wolf_init_sdl(t_wolf *w)
-{
-
-}
-
-t_wolf	*wolf_init(t_wolf *w)
+t_wolf	*wolf_init(t_wolf *w, Uint16 width, Uint16 height, const char *title)
 {
 	w = (t_wolf*)malloc(sizeof(t_wolf));
 	if (w == NULL)
@@ -38,5 +33,6 @@ t_wolf	*wolf_init(t_wolf *w)
 	w->sdl->screen = (SDL_Texture*)malloc(sizeof(w->sdl->screen));
 	if (w->sdl->screen == NULL)
 		wolf_error(MALLOCK_ERROR);
+	create_screen(w, width, height, title);
 	return (w);
 }

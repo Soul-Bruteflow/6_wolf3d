@@ -1,5 +1,11 @@
 #include "wolf3d.h"
 
+void	wolf_init_title(t_wolf *w, const char *title)
+{
+	w->win_title = ft_strdup(title);
+	w->win_title_update = NULL;
+}
+
 void	screen_size(t_wolf *w, Uint16 width, Uint16 height)
 {
 	w->width = width;
@@ -48,10 +54,10 @@ void	screen_title(t_wolf *w)
 	w->win_title_update = ft_strjoin(w->win_title, win_size_text);
 }
 
-void	create_screen(t_wolf *w, Uint16 wdth, Uint16 hght)
+void	create_screen(t_wolf *w, Uint16 wdth, Uint16 hght, const char *title)
 {
+	wolf_init_title(w, title);
 	screen_size(w, wdth, hght);
-	screen_title(w);
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		wolf_error(INIT_ERROR);
 	w->sdl->window = SDL_CreateWindow(w->win_title_update, SDL_WINDOWPOS_CENTERED,
