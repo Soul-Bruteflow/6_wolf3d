@@ -21,7 +21,6 @@ int	main(int ac, char **av)
 		wolf = NULL;
 		wolf = wolf_init(wolf, 800, 600, "wolf3d, \0");
 		wolf->av = av;
-//		printf(%s)
 		map_parser(wolf);
 		game_loop(wolf);
 		quit(wolf);

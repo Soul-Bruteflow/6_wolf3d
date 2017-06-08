@@ -4,18 +4,20 @@ static Uint16	count_symbols(t_wolf *w)
 {
 	char			*s;
 	Uint16			i;
-	Uint16			nbr;
+//	Uint16			nbr;
 
 	i = 0;
-	nbr = 0;
+//	nbr = 0;
 	s = w->line;
 	while (s[i])
 	{
-		if (s[i] != ' ' && (s[i + 1] == ' ' || s[i + 1] == '\0'))
-			nbr++;
+		int tmp1 = ft_isalpha(s[i]);
+		int tmp2 = ft_isdigit(s[i]);
+		if (tmp1 == 0 && tmp2 == 0)
+			wolf_error(LINE_ERROR);
 		i++;
 	}
-	return (nbr);
+	return (i);
 }
 
 void	map_parser(t_wolf *w)
