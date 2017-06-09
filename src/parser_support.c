@@ -63,11 +63,6 @@ void	nbr_error(t_wolf *w, Uint16 i)
 		close_file(w);
 		wolf_error(EMPTY_MAP_ERROR);
 	}
-//	else if (w->map_x == 1 && w->map_y < 2)
-//	{
-//		close_file(w);
-//		wolf_error(SMALL_MAP_ERROR);
-//	}
 	else if (w->map_x < 7 || w->map_y < 7)
 	{
 		close_file(w);
