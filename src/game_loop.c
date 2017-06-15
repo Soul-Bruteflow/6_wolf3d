@@ -22,6 +22,8 @@ t_bool	running(SDL_Event *event, const Uint8 **key_state)
 	return (true);
 }
 
+
+
 void	game_loop(t_wolf *wolf)
 {
 	while ((running(&wolf->sdl->event, &wolf->key_state)))
