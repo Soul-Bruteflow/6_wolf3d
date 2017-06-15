@@ -130,6 +130,7 @@ void				gnl_error(t_wolf *w, int i);
 void				nbr_error(t_wolf *w, Uint16 i);
 void				parser_first_read(t_wolf *w);
 void				parser_second_read(t_wolf *w);
+t_bool				parser_final_validation(t_wolf *w);
 
 
 void	**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y);

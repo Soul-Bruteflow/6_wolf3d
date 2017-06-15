@@ -25,11 +25,11 @@ void	parser_second_read(t_wolf *w)
 	i = 0;
 	open_file(w);
 	w->map_y = 0;
-	while (w->map_y < w->map_height)
+	while (w->map_y <= w->map_height)
 	{
 		i = get_next_line(w->fd, &w->line);
 		w->map_x = 0;
-		while (w->map_x < w->map_width)
+		while (w->map_x <= w->map_width)
 		{
 			w->world_map[w->map_y][w->map_x] = parse_map_tile(w, w->map_x);
 			w->map_x++;
