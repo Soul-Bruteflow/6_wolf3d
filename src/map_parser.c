@@ -3,12 +3,14 @@
 void	map_parser(t_wolf *w)
 {
 	parser_first_read(w);
-	w->map_height = w->map_y;
-	w->map_width = w->map_x;
+	w->map_size_y = w->map_y;
+	w->map_size_x = w->map_x;
+	w->map_height = (Uint16)(w->map_size_y - 1);
+	w->map_width = (Uint16)(w->map_size_x - 1);
+	w->map_center_y = (Uint16)(w->map_size_y / 2);
+	w->map_center_x = (Uint16)(w->map_size_x / 2);
 	w->world_map = (Uint8**)ft_malloc_2d_array(sizeof(w->world_map),
-											   w->map_width, w->map_height);
-	w->map_height -= 1;
-	w->map_width -= 1;
+											   w->map_size_x, w->map_size_y);
 	parser_second_read(w);
 	if (parser_final_validation(w) == false)
 		exit (0);

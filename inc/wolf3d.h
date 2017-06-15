@@ -68,6 +68,8 @@ typedef struct		s_wolf
 
 	Uint16			map_x;
 	Uint16			map_y;
+	Uint16			map_center_x;
+	Uint16			map_center_y;
 	char			*line;
 	int 			fd;
 	Uint16			tmp;
@@ -75,6 +77,8 @@ typedef struct		s_wolf
 
 	Uint16			map_width;
 	Uint16 			map_height;
+	Uint16			map_size_y;
+	Uint16 			map_size_x;
 	Uint8			**world_map;
 	float 			pos_x;
 	float 			pos_y;

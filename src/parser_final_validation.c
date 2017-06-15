@@ -38,6 +38,21 @@ t_bool	validate_borders(t_wolf *w)
 
 t_bool	validate_center(t_wolf *w)
 {
+	Uint16 i;
+	Uint16 j;
+
+	i = (Uint16)(w->map_center_y - 2);
+	while (i < w->map_center_y + 3)
+	{
+		j = (Uint16)(w->map_center_x - 2);
+		while (j < w->map_center_x + 3)
+		{
+			if (w->world_map[i][j] != 0)
+				return (false);
+			j++;
+		}
+		i++;
+	}
 	return (true);
 }
 
