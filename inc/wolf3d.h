@@ -65,7 +65,6 @@ typedef struct		s_wolf
 	char 			*win_title_update;
 	const Uint8		*key_state;
 	Uint8			*draw_buffer;
-
 	Uint16			map_x;
 	Uint16			map_y;
 	Uint16			map_center_x;
@@ -74,7 +73,6 @@ typedef struct		s_wolf
 	int 			fd;
 	Uint16			tmp;
 	char			**av;
-
 	Uint16			map_width;
 	Uint16 			map_height;
 	Uint16			map_size_y;
@@ -88,6 +86,25 @@ typedef struct		s_wolf
 	float			plane_y;
 	float 			time;
 	float 			old_time;
+	int				ray_per_x;
+	float			camera_x;
+	float 			ray_pos_x;
+	float 			ray_pos_y;
+	float 			ray_dir_x;
+	float 			ray_dir_y;
+	int 			mapx;
+	int 			mapy;
+	float 			side_dist_x;
+	float 			side_dist_y;
+	float 			delta_dist_x;
+	float 			delta_dist_y;
+	float 			perp_wall_dist;
+	int 			step_x;
+	int 			step_y;
+	int 			hit;
+	int 			side;
+	float 			sqr_ray_dir_y;
+	float 			sqr_ray_dir_x;
 }					t_wolf;
 
 /*
@@ -112,6 +129,10 @@ void				world_clear(t_wolf *wolf);
 void				world_update(t_wolf *wolf);
 void				world_render(t_wolf *w);
 /*
+** Raycasting
+*/
+void				raycast_core(t_wolf *w);
+/*
 ** Effects.
 */
 void				ft_noise(t_wolf *wolf);
@@ -135,9 +156,10 @@ void				nbr_error(t_wolf *w, Uint16 i);
 void				parser_first_read(t_wolf *w);
 void				parser_second_read(t_wolf *w);
 t_bool				parser_final_validation(t_wolf *w);
-
-
-void	**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y);
-void	ft_free_2d_array(void **array, size_t y);
+/*
+** Support
+*/
+void				**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y);
+void				ft_free_2d_array(void **array, size_t y);
 
 #endif

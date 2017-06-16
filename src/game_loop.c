@@ -22,15 +22,14 @@ t_bool	running(SDL_Event *event, const Uint8 **key_state)
 	return (true);
 }
 
-
-
 void	game_loop(t_wolf *wolf)
 {
 	while ((running(&wolf->sdl->event, &wolf->key_state)))
 	{
 		get_user_inputs(wolf);
 		world_clear(wolf);
-		ft_noise(wolf);
+		raycast_core(wolf);
+//		ft_noise(wolf);
 		world_update(wolf);
 	}
 }
