@@ -48,6 +48,13 @@ typedef enum		e_bool
 	false, true
 }					t_bool;
 
+typedef struct		s_rgb
+{
+	Uint8			r;
+	Uint8			g;
+	Uint8			b;
+}					t_rgb;
+
 typedef struct		s_sdl
 {
 	SDL_Window		*window;
@@ -105,6 +112,9 @@ typedef struct		s_wolf
 	int 			side;
 	float 			sqr_ray_dir_y;
 	float 			sqr_ray_dir_x;
+	int				draw_start;
+	int 			lineheight;
+	int 			draw_end;
 }					t_wolf;
 
 /*
@@ -161,5 +171,9 @@ t_bool				parser_final_validation(t_wolf *w);
 */
 void				**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y);
 void				ft_free_2d_array(void **array, size_t y);
-
+void 				ft_xor_swap(int *a, int *b);
+/*
+**
+*/
+t_bool 				verLine(int x, int y1, int y2, t_rgb color, t_wolf *w);
 #endif
