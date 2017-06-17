@@ -93,6 +93,7 @@ typedef struct		s_wolf
 	float			plane_y;
 	float 			time;
 	float 			old_time;
+	float 			frame_time;
 	int				ray_per_x;
 	float			camera_x;
 	float 			ray_pos_x;
@@ -113,8 +114,18 @@ typedef struct		s_wolf
 	float 			sqr_ray_dir_y;
 	float 			sqr_ray_dir_x;
 	int				draw_start;
-	int 			lineheight;
+	int 			line_height;
 	int 			draw_end;
+	float 			move_speed;
+	float 			rot_speed;
+	float 			camera_y;
+	float			ray_per_y;
+	int				linewidth;
+	int 			pitch;
+	size_t			offset;
+	size_t			old_offset;
+	float			old_dir_x;
+	float 			old_plane_x;
 }					t_wolf;
 
 /*
@@ -175,5 +186,8 @@ void 				ft_xor_swap(int *a, int *b);
 /*
 **
 */
-t_bool 				verLine(int x, int y1, int y2, t_rgb color, t_wolf *w);
+t_bool 				verLine(int x, int y1, int y2, t_rgb color, t_wolf *wolf, int w, int h);
+
+
+void	tmp(t_wolf *w);
 #endif

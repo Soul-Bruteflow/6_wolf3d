@@ -44,4 +44,5 @@ void	world_update(t_wolf *wolf)
 	SDL_UpdateTexture(wolf->sdl->screen, NULL, &wolf->draw_buffer[0], 800 * 4);
 	SDL_RenderCopy(wolf->sdl->renderer, wolf->sdl->screen, NULL, NULL);
 	SDL_RenderPresent(wolf->sdl->renderer);
+	bzero(wolf->draw_buffer, 800 * 600 * 4);
 }
