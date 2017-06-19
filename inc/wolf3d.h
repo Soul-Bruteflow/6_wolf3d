@@ -28,6 +28,8 @@
 # define WINDOW_ERROR 2
 # define RENDERER_ERROR 3
 # define TEXTURE_ERROR 4
+# define TEX_WIDTH 128
+# define TEX_HEIGHT 128
 
 /*
 ** Parser
@@ -39,6 +41,8 @@
 # define SMALL_MAP_ERROR 24
 # define BIG_MAP_ERROR 25
 # define LINE_ERROR 26
+
+Uint32 buffer[600][800];
 
 /*
 ** General
@@ -63,7 +67,7 @@ typedef struct		s_sdl
 	SDL_Renderer	*renderer;
 	SDL_Texture		*screen;
 	SDL_Event		event;
-	SDL_Texture		**walls;
+	SDL_Texture		*walls;
 }					t_sdl;
 
 typedef struct		s_wolf
@@ -129,6 +133,11 @@ typedef struct		s_wolf
 	size_t			old_offset;
 	float			old_dir_x;
 	float 			old_plane_x;
+
+	int 			tex_num;
+	float 			wall_x;
+	int 			tex_x;
+	int 			tex_y;
 }					t_wolf;
 
 /*

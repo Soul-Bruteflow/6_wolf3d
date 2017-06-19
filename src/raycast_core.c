@@ -93,30 +93,65 @@ void	wolf_color_core(t_wolf *w)
 void	wolf_texture_core(t_wolf *w)
 {
 	//texturing calculations
-	int texNum = worldMap[mapX][mapY] - 1; //1 subtracted from it so that texture 0 can be used!
+	w->tex_num = w->world_map[w->mapx][w->mapy] - 1; //1 subtracted from it so that texture 0 can be used!
 
 	//calculate value of wallX
-	double wallX; //where exactly the wall was hit
-	if (side == 0) wallX = rayPosY + perpWallDist * rayDirY;
-	else           wallX = rayPosX + perpWallDist * rayDirX;
-	wallX -= floor((wallX));
+//	double wallX; //where exactly the wall was hit
+	if (w->side == 0)
+		w->wall_x = w->ray_pos_y + w->perp_wall_dist * w->ray_dir_y;
+	else
+		w->wall_x = w->ray_pos_x + w->perp_wall_dist * w->ray_dir_x;
+	w->wall_x -= floorf(w->wall_x);
 
 	//x coordinate on the texture
-	int texX = int(wallX * double(texWidth));
-	if(side == 0 && rayDirX > 0) texX = texWidth - texX - 1;
-	if(side == 1 && rayDirY < 0) texX = texWidth - texX - 1;
+	w->tex_x = (int)(w->wall_x * (float)TEX_WIDTH);
+	if(w->side == 0 && w->ray_dir_x > 0)
+		w->tex_x = TEX_WIDTH - w->tex_x - 1;
+	if(w->side == 1 && w->ray_dir_y < 0)
+		w->tex_x = TEX_WIDTH - w->tex_x - 1;
 }
 
 void	draw_texture(t_wolf *w)
 {
-	for(int y = drawStart; y<drawEnd; y++)
+	Uint8 *w_p;
+	void *wall_pixels;
+	int wall_pitch;
+
+	SDL_LockTexture(w->sdl->walls, NULL, &wall_pixels, &wall_pitch);
+	SDL_UnlockTexture(w->sdl->walls);
+
+	w_p = wall_pixels;
+	for(int y = w->draw_start; y < w->draw_end; y++)
 	{
-		int d = y * 256 - h * 128 + lineHeight * 128;  //256 and 128 factors to avoid floats
-		int texY = ((d * texHeight) / lineHeight) / 256;
-		Uint32 color = texture[texNum][texHeight * texY + texX];
+		int d = y * 256 - w->height * 128 + w->line_height * 128;  //256 and 128 factors to avoid floats
+		w->tex_y = ((d * TEX_HEIGHT) / w->line_height) / 256;
+
+
+		size_t wall_offset = (size_t)((TEX_WIDTH * 4 * y) + w->tex_x * 4);
+		t_rgb color;
+		color.r = w_p[wall_offset + 2]; //b
+		color.g = w_p[wall_offset + 1]; //g
+		color.b = w_p[wall_offset + 0]; //r
+		color.b = SDL_ALPHA_OPAQUE;		//a
+//		Uint32 color = w->sdl->walls[w->tex_x][TEX_HEIGHT * texY + w->tex_x];
+
+
 		//make color darker for y-sides: R, G and B byte each divided through two with a "shift" and an "and"
-		if(side == 1) color = (color >> 1) & 8355711;
-		buffer[y][x] = color;
+		if (w->side == 1)
+		{
+			color.r /= 2;
+			color.g /= 2;
+			color.b /= 2;
+		}
+
+//		w->draw_buffer[y][w->ray_per_x] = color;
+
+
+		w->offset = (size_t)((w->width * 4 * y) + w->ray_per_x * 4);
+		w->draw_buffer[w->offset + 0] = 0;			// b
+		w->draw_buffer[w->offset + 1] = 0;			// g
+		w->draw_buffer[w->offset + 2] = 255;			// r
+		w->draw_buffer[w->offset + 3] = SDL_ALPHA_OPAQUE;	// a
 	}
 }
 
