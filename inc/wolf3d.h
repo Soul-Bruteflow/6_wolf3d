@@ -17,6 +17,8 @@
 # include "get_next_line.h"
 # include <math.h>
 # include <SDL2/SDL.h>
+# include <SDL2_image/SDL_image.h>
+# include <SDL2_ttf/SDL_ttf.h>
 
 /*
 ** SDL
@@ -61,6 +63,7 @@ typedef struct		s_sdl
 	SDL_Renderer	*renderer;
 	SDL_Texture		*screen;
 	SDL_Event		event;
+	SDL_Texture		**walls;
 }					t_sdl;
 
 typedef struct		s_wolf
