@@ -67,7 +67,9 @@ typedef struct		s_sdl
 	SDL_Renderer	*renderer;
 	SDL_Texture		*screen;
 	SDL_Event		event;
-	SDL_Texture		*walls;
+	SDL_Texture		**walls;
+	void			*wall_tmp_buffer;
+	Uint8			*wall_buffer;
 }					t_sdl;
 
 typedef struct		s_wolf

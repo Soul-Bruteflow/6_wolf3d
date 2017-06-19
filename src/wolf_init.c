@@ -35,7 +35,7 @@ t_wolf	*wolf_init(t_wolf *w, Uint16 width, Uint16 height, const char *title)
 		wolf_error(MALLOCK_ERROR);
 	create_screen(w, width, height, title);
 //	w->sdl->walls = (SDL_Texture*)malloc(sizeof(SDL_Texture) * 10);
-	w->sdl->walls = (SDL_Texture*)malloc(sizeof(w->sdl->walls));
+	w->sdl->walls = (SDL_Texture*)malloc(sizeof(w->sdl->walls) * TEX_WIDTH * TEX_HEIGHT * 4);
 //	w->sdl->walls[1] = IMG_LoadTexture(w->sdl->renderer, "./texture/wall2.bmp");
 	return (w);
 }

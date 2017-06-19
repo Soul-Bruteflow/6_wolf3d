@@ -35,94 +35,6 @@
 //}
 
 
-
-//#define WIDTH 800
-//#define HEIGHT 600
-//#define IMG_PATH "wall1.bmp"
-//
-//int main (int argc, char *argv[]) {
-//
-//	Uint8			*draw_buffer;
-//	draw_buffer = (Uint8*)malloc(sizeof(Uint8) * 800 * 600 * 4);
-//	// variable declarations
-//	SDL_Window *win = NULL;
-//	SDL_Renderer *renderer = NULL;
-//	SDL_Texture *img = NULL;
-//	int w, h; // texture width & height
-//
-//	// Initialize SDL.
-//	if (SDL_Init(SDL_INIT_VIDEO) < 0)
-//		return 1;
-//
-//	// create the window and renderer
-//	// note that the renderer is accelerated
-//	win = SDL_CreateWindow("Image Loading", 100, 100, WIDTH, HEIGHT, 0);
-//	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
-//
-//	// load our image
-//	img = IMG_LoadTexture(renderer, IMG_PATH);
-//	SDL_QueryTexture(img, NULL, NULL, &w, &h); // get the width and height of the texture
-//	// put the location where we want the texture to be drawn into a rectangle
-//	// I'm also scaling the texture 2x simply by setting the width and height
-//	SDL_Rect texr; texr.x = WIDTH/2; texr.y = HEIGHT/2; texr.w = w*2; texr.h = h*2;
-//
-//	// main loop
-//	while (1) {
-//
-//		// event handling
-//		SDL_Event e;
-//		if ( SDL_PollEvent(&e) ) {
-//			if (e.type == SDL_QUIT)
-//				break;
-//			else if (e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_ESCAPE)
-//				break;
-//		}
-//
-////		// clear the screen
-////		SDL_RenderClear(renderer);
-////		// copy the texture to the rendering context
-////		SDL_RenderCopy(renderer, img, NULL, &texr);
-////		// flip the backbuffer
-////		// this means that everything that we prepared behind the screens is actually shown
-////		SDL_RenderPresent(renderer);
-//
-//
-//		Uint16	i;
-//		Uint16	x;
-//		Uint16	y;
-//		Uint32	offset;
-//		i = 0;
-//		while (i < 1000)
-//		{
-//			x = (Uint16)(rand() % 800);
-//			y = (Uint16)(rand() % 600);
-//			offset = (Uint32)((800 * 4 * y) + x * 4);
-//			draw_buffer[offset + 0] = (Uint8)(rand() % 256);			// b
-//			draw_buffer[offset + 1] = (Uint8)(rand() % 256);			// g
-//			draw_buffer[offset + 2] = (Uint8)(rand() % 256);			// r
-//			draw_buffer[offset + 3] = SDL_ALPHA_OPAQUE;				// a
-//			i++;
-//		}
-//
-//
-//		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-//		SDL_RenderClear(renderer);
-//		SDL_UpdateTexture(screen, NULL, &draw_buffer[0], 800 * 4);
-//		SDL_RenderCopy(renderer, screen, NULL, NULL);
-//		SDL_RenderPresent(renderer);
-////		bzero(draw_buffer, 800 * 600 * 4);
-//
-//	}
-//
-//	SDL_DestroyTexture(img);
-//	SDL_DestroyRenderer(renderer);
-//	SDL_DestroyWindow(win);
-//
-//	return 0;
-//}
-
-#include "wolf3d.h"
-
 const Uint8		*key_state;
 int f = 1;
 int w, h;
@@ -149,17 +61,19 @@ int	main(int ac, char **av)
 	wolf->sdl->screen = SDL_CreateTexture (wolf->sdl->renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, 800, 600);
 
 
-	SDL_Texture *img = NULL;
-	img = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall1.bmp");
-	SDL_QueryTexture(img, NULL, NULL, &w, &h);
-	SDL_Rect texr; texr.x = 800/2; texr.y = 600/2; texr.w = w; texr.h = h;
+	SDL_Texture **img = malloc(sizeof(SDL_Texture *) * 10);
+	img[0] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall1.bmp");
+	img[1] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall2.bmp");
+	img[9] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall1.bmp");
+
+	SDL_QueryTexture(img[9], NULL, NULL, &w, &h);
 
 	Uint8 *w_p = (Uint8*)malloc(sizeof(Uint8) * 128 * 128 * 4);
 	void *wall_pixels;
 	int wall_pitch;
 
-	SDL_LockTexture(img, NULL, &wall_pixels, &wall_pitch);
-	SDL_UnlockTexture(img);
+	SDL_LockTexture(img[9], NULL, &wall_pixels, &wall_pitch);
+	SDL_UnlockTexture(img[9]);
 
 	while(1)
 	{
@@ -219,7 +133,7 @@ void draw_wall(t_wolf * wolf, Uint8 *w_p, int wall_pitch)
 
 //	65025
 	int j = 0;
-	for (int i = 0; i < w * h * 4; i += 4)
+	for (int i = 0; i < 127 * 127 * 4; i += 4)
 	{
 		unsigned int offset = ( 800 * 4 * y ) + x * 4;
 		unsigned int offset1 = ( 128 * 4 * y1 ) + x1 * 4;
