@@ -17,4 +17,21 @@ void	assign_textures(t_wolf *w)
 void	texture_core(t_wolf *w)
 {
 	assign_textures(w);
+
+	int i;
+	void *wall_tmp_buffer;
+
+	w->wall_buffer = (Uint8**)malloc(sizeof(Uint8*) * 10);
+	if (w->wall_buffer == NULL)
+		wolf_error(MALLOCK_ERROR);
+	i = -1;
+	while (i++ < 9)
+	{
+		SDL_LockTexture(w->walls[i], NULL, &wall_tmp_buffer, &w->wall_pitch);
+		SDL_UnlockTexture(w->walls[i]);
+		w->wall_buffer[i] = (Uint8*)malloc(sizeof(Uint8) * TEX_WIDTH * TEX_HEIGHT * 4);
+		if (w->wall_buffer[i] == NULL)
+			wolf_error(MALLOCK_ERROR);
+		w->wall_buffer[i][0] = (Uint8)wall_tmp_buffer;
+	}
 }

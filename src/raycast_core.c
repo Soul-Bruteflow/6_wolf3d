@@ -104,7 +104,7 @@ void	wolf_texture_core(t_wolf *w)
 	w->wall_x -= floorf(w->wall_x);
 
 	//x coordinate on the texture
-	w->tex_x = (int)(w->wall_x * (float)TEX_WIDTH);
+	w->tex_x = (int)(w->wall_x * TEX_WIDTH);
 	if(w->side == 0 && w->ray_dir_x > 0)
 		w->tex_x = TEX_WIDTH - w->tex_x - 1;
 	if(w->side == 1 && w->ray_dir_y < 0)
@@ -118,32 +118,16 @@ void	draw_texture(t_wolf *w)
 		int d = y * 256 - w->height * 128 + w->line_height * 128;  //256 and 128 factors to avoid floats
 		w->tex_y = ((d * TEX_HEIGHT) / w->line_height) / 256;
 
-
-//		size_t wall_offset = (size_t)((TEX_WIDTH * 4 * y) + w->tex_x * 4);
-//		t_rgb color;
-//		color.r = w_p[wall_offset + 2]; //b
-//		color.g = w_p[wall_offset + 1]; //g
-//		color.b = w_p[wall_offset + 0]; //r
-//		color.b = SDL_ALPHA_OPAQUE;		//a
-//		Uint32 color = w->sdl->walls[w->tex_x][TEX_HEIGHT * texY + w->tex_x];
+//		w->tex_y = ((y - 600 * 0.5f + w->line_height * 0.5f) * 128) / w->line_height;
 
 
-		//make color darker for y-sides: R, G and B byte each divided through two with a "shift" and an "and"
-//		if (w->side == 1)
-//		{
-//			color.r /= 2;
-//			color.g /= 2;
-//			color.b /= 2;
-//		}
+		unsigned int offs = (unsigned int)(800 * 4 * y) + w->ray_per_x * 4;
+		unsigned int offs1 = (unsigned int)(128 * 4 * w->tex_y) + w->tex_x * 4;
 
-//		w->draw_buffer[y][w->ray_per_x] = color;
-
-
-		w->offset = (size_t)((w->width * 4 * y) + w->ray_per_x * 4);
-		w->draw_buffer[w->offset + 0] = 0;			// b
-		w->draw_buffer[w->offset + 1] = 0;			// g
-		w->draw_buffer[w->offset + 2] = 255;			// r
-		w->draw_buffer[w->offset + 3] = SDL_ALPHA_OPAQUE;	// a
+		w->draw_buffer[ offs + 0 ] = w->wall_buffer[w->tex_num][offs1 + 0];	// b
+		w->draw_buffer[ offs + 1 ] = w->wall_buffer[w->tex_num][offs1 + 1];	// g
+		w->draw_buffer[ offs + 2 ] = w->wall_buffer[w->tex_num][offs1 + 2];	// r
+		w->draw_buffer[ offs + 3 ] = w->wall_buffer[w->tex_num][offs1 + 3];	// a
 	}
 }
 
