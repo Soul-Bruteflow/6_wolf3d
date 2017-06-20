@@ -84,7 +84,4 @@ void	create_screen(t_wolf *w, Uint16 wdth, Uint16 hght, const char *title)
 	w->sdl->screen = SDL_CreateTexture(w->sdl->renderer,
 		SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING,
 		w->width, w->height);
-	w->sdl->walls = IMG_LoadTexture(w->sdl->renderer, "./textures/wall1.bmp");
-	if (w->sdl->screen == NULL)
-		wolf_error(TEXTURE_ERROR);
 }

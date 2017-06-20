@@ -12,8 +12,24 @@
 
 #include "wolf3d.h"
 
+void	malloc_textures(t_wolf *w)
+{
+
+}
+
+void	malloc_screen(t_wolf *w)
+{
+
+}
+
+void	malloc_main(t_wolf *w)
+{
+
+}
+
 t_wolf	*wolf_init(t_wolf *w, Uint16 width, Uint16 height, const char *title)
 {
+
 	w = (t_wolf*)malloc(sizeof(t_wolf));
 	if (w == NULL)
 		wolf_error(MALLOCK_ERROR);
@@ -24,6 +40,7 @@ t_wolf	*wolf_init(t_wolf *w, Uint16 width, Uint16 height, const char *title)
 	w->sdl = (t_sdl*)malloc(sizeof(t_sdl));
 	if (w->sdl == NULL)
 		wolf_error(MALLOCK_ERROR);
+
 	w->sdl->window = (SDL_Window*)malloc(sizeof(w->sdl->window));
 	if (w->sdl->window == NULL)
 		wolf_error(MALLOCK_ERROR);
@@ -33,9 +50,22 @@ t_wolf	*wolf_init(t_wolf *w, Uint16 width, Uint16 height, const char *title)
 	w->sdl->screen = (SDL_Texture*)malloc(sizeof(w->sdl->screen));
 	if (w->sdl->screen == NULL)
 		wolf_error(MALLOCK_ERROR);
+
+
+	w->walls = (SDL_Texture**)malloc(sizeof(SDL_Texture*) * TEX_NBR);
+	if (w->sdl->screen == NULL)
+		wolf_error(MALLOCK_ERROR);
+	w->wall_buffer = (Uint8*)malloc(sizeof(Uint8) * TEX_WIDTH * TEX_HEIGHT * 4);
+	if (w->sdl->screen == NULL)
+		wolf_error(MALLOCK_ERROR);
+
+
+
+
+	malloc_main(w);
+	malloc_screen(w);
+	malloc_textures(w);
+	texture_core(w);
 	create_screen(w, width, height, title);
-//	w->sdl->walls = (SDL_Texture*)malloc(sizeof(SDL_Texture) * 10);
-	w->sdl->walls = (SDL_Texture*)malloc(sizeof(w->sdl->walls) * TEX_WIDTH * TEX_HEIGHT * 4);
-//	w->sdl->walls[1] = IMG_LoadTexture(w->sdl->renderer, "./texture/wall2.bmp");
 	return (w);
 }

@@ -30,6 +30,7 @@
 # define TEXTURE_ERROR 4
 # define TEX_WIDTH 128
 # define TEX_HEIGHT 128
+# define TEX_NBR 10
 
 /*
 ** Parser
@@ -67,9 +68,6 @@ typedef struct		s_sdl
 	SDL_Renderer	*renderer;
 	SDL_Texture		*screen;
 	SDL_Event		event;
-	SDL_Texture		**walls;
-	void			*wall_tmp_buffer;
-	Uint8			*wall_buffer;
 }					t_sdl;
 
 typedef struct		s_wolf
@@ -140,6 +138,13 @@ typedef struct		s_wolf
 	float 			wall_x;
 	int 			tex_x;
 	int 			tex_y;
+
+	SDL_Texture		**walls;
+	void			*wall_tmp_buffer;
+	Uint8			*wall_buffer;
+	int 			wall_pitch;
+	int 			wall_height;
+	int 			wall_width;
 }					t_wolf;
 
 /*
@@ -204,4 +209,9 @@ t_bool 				verLine(int x, int y1, int y2, t_rgb color, t_wolf *wolf, int w, int 
 
 
 void	tmp(t_wolf *w);
+
+/*
+** Textures
+*/
+void	texture_core(t_wolf *w);
 #endif

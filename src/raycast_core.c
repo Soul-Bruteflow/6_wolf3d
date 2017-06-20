@@ -113,36 +113,28 @@ void	wolf_texture_core(t_wolf *w)
 
 void	draw_texture(t_wolf *w)
 {
-	Uint8 *w_p;
-	void *wall_pixels;
-	int wall_pitch;
-
-	SDL_LockTexture(w->sdl->walls, NULL, &wall_pixels, &wall_pitch);
-	SDL_UnlockTexture(w->sdl->walls);
-
-	w_p = wall_pixels;
 	for(int y = w->draw_start; y < w->draw_end; y++)
 	{
 		int d = y * 256 - w->height * 128 + w->line_height * 128;  //256 and 128 factors to avoid floats
 		w->tex_y = ((d * TEX_HEIGHT) / w->line_height) / 256;
 
 
-		size_t wall_offset = (size_t)((TEX_WIDTH * 4 * y) + w->tex_x * 4);
-		t_rgb color;
-		color.r = w_p[wall_offset + 2]; //b
-		color.g = w_p[wall_offset + 1]; //g
-		color.b = w_p[wall_offset + 0]; //r
-		color.b = SDL_ALPHA_OPAQUE;		//a
+//		size_t wall_offset = (size_t)((TEX_WIDTH * 4 * y) + w->tex_x * 4);
+//		t_rgb color;
+//		color.r = w_p[wall_offset + 2]; //b
+//		color.g = w_p[wall_offset + 1]; //g
+//		color.b = w_p[wall_offset + 0]; //r
+//		color.b = SDL_ALPHA_OPAQUE;		//a
 //		Uint32 color = w->sdl->walls[w->tex_x][TEX_HEIGHT * texY + w->tex_x];
 
 
 		//make color darker for y-sides: R, G and B byte each divided through two with a "shift" and an "and"
-		if (w->side == 1)
-		{
-			color.r /= 2;
-			color.g /= 2;
-			color.b /= 2;
-		}
+//		if (w->side == 1)
+//		{
+//			color.r /= 2;
+//			color.g /= 2;
+//			color.b /= 2;
+//		}
 
 //		w->draw_buffer[y][w->ray_per_x] = color;
 
