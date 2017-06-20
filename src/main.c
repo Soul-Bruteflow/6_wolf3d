@@ -74,11 +74,19 @@ int	main(int ac, char **av)
 //	Uint8 *w_p = (Uint8*)malloc(sizeof(Uint8) * 128 * 128 * 4);
 //	void *pixels = malloc(sizeof(pixels) * 128 * 128 * 4);
 
-	SDL_Surface *surface = IMG_Load("./textures/wall0.bmp");
+	SDL_Surface **surface = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * 10);
+	surface[0] = (SDL_Surface*)malloc(sizeof(SDL_Surface) * 128 * 128 * 4);
+	surface[0] = IMG_Load("./textures/wall0.bmp");
+	surface[1] = (SDL_Surface*)malloc(sizeof(SDL_Surface) * 128 * 128 * 4);
+	surface[1] = IMG_Load("./textures/wall1.bmp");
 
 
-	int bpp = surface->format->BytesPerPixel;
-	Uint8 *upixels = (Uint8 *)surface->pixels + 0 * surface->pitch + 0 * bpp;
+	int bpp = surface[0]->format->BytesPerPixel;
+	Uint8 **upixels = (Uint8**)malloc(sizeof(Uint8*) * 10);
+	upixels[0] = (Uint8*)malloc(sizeof(Uint8) * 128 * 128 * 4);
+	upixels[0]= (Uint8 *)surface[0]->pixels + 0 * surface[0]->pitch + 0 * bpp;
+	upixels[1] = (Uint8*)malloc(sizeof(Uint8) * 128 * 128 * 4);
+	upixels[1]= (Uint8 *)surface[1]->pixels + 0 * surface[1]->pitch + 0 * bpp;
 
 //	void *dest; int pitch; Uint8 *upixels;
 //	SDL_LockTexture(img, NULL, &dest, &pitch);
@@ -116,10 +124,10 @@ int	main(int ac, char **av)
 			unsigned int offset = ( 800 * 4 * y ) + x * 4;
 			unsigned int offset1 = ( 128 * 4 * y1 ) + x1 * 4;
 
-			wolf->draw_buffer[ offset + 0 ] = upixels[offset1 + 0];	// b
-			wolf->draw_buffer[ offset + 1 ] = upixels[offset1 + 1];	// g
-			wolf->draw_buffer[ offset + 2 ] = upixels[offset1 + 2];	// r
-			wolf->draw_buffer[ offset + 3 ] = upixels[offset1 + 3];	// a
+			wolf->draw_buffer[ offset + 0 ] = upixels[0][offset1 + 0];	// b
+			wolf->draw_buffer[ offset + 1 ] = upixels[0][offset1 + 1];	// g
+			wolf->draw_buffer[ offset + 2 ] = upixels[0][offset1 + 2];	// r
+			wolf->draw_buffer[ offset + 3 ] = upixels[0][offset1 + 3];	// a
 			if (j % 128 == 0)
 			{
 				y++;
