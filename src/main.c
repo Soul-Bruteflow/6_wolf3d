@@ -61,35 +61,34 @@ int	main(int ac, char **av)
 	wolf->sdl->screen = SDL_CreateTexture (wolf->sdl->renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, 800, 600);
 
 
-	SDL_Texture **walls = malloc(sizeof(SDL_Texture*) * 10);
-	walls[0] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall0.bmp");
-	walls[1] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall1.bmp");
-	walls[2] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall2.bmp");
-	walls[3] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall3.bmp");
-	walls[4] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall4.bmp");
-	walls[5] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall5.bmp");
-	walls[6] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall6.bmp");
-	walls[7] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall7.bmp");
-	walls[8] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall8.bmp");
-	walls[9] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall9.bmp");
+//	SDL_Texture **img = malloc(sizeof(SDL_Texture *) * 10);
 
-//	SDL_QueryTexture(img[9], NULL, NULL, &w, &h);
+//	SDL_Texture *img = SDL_CreateTexture (wolf->sdl->renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, 128, 128);
+	SDL_Texture *img = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall0.bmp");
 
-	void *wall_tmp_buffer;
-	int wall_pitch;
-	Uint8 **wall_buffer = (Uint8**)malloc(sizeof(Uint8*) * 10);
-	int k = -1;
-	while (k++ < 9)
-	{
-		SDL_LockTexture(walls[k], NULL, &wall_tmp_buffer, &wall_pitch);
-		SDL_UnlockTexture(walls[k]);
-		wall_buffer[k] = (Uint8*)malloc(sizeof(Uint8) * TEX_WIDTH * TEX_HEIGHT * 4);
-		wall_buffer[k][0] = (Uint8)wall_tmp_buffer;
-	}
+//	img[1] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall1.bmp");
+//	img[2] = IMG_LoadTexture(wolf->sdl->renderer, "./textures/wall2.bmp");
+
+//	SDL_QueryTexture(img[0], NULL, NULL, &w, &h);
+
+//	Uint8 *w_p = (Uint8*)malloc(sizeof(Uint8) * 128 * 128 * 4);
+//	void *pixels = malloc(sizeof(pixels) * 128 * 128 * 4);
+
+	SDL_Surface *surface = IMG_Load("./textures/wall0.bmp");
 
 
-//	SDL_LockTexture(img[9], NULL, &wall_pixels, &wall_pitch);
-//	SDL_UnlockTexture(img[9]);
+	int bpp = surface->format->BytesPerPixel;
+	Uint8 *upixels = (Uint8 *)surface->pixels + 0 * surface->pitch + 0 * bpp;
+
+//	void *dest; int pitch; Uint8 *upixels;
+//	SDL_LockTexture(img, NULL, &dest, &pitch);
+//	SDL_UnlockTexture(img);
+//	upixels = dest;
+//	upixels = (Uint8*)malloc(sizeof(Uint8) * 900 * 900 * 4);
+
+//	SDL_LockTexture(img, NULL, &pixels, &pitch);
+//	Uint8 *upixels = (Uint8*)malloc(sizeof(Uint8) * 128 * 128 * 4);
+//	upixels = (Uint8*) pixels;
 
 	while(1)
 	{
@@ -101,25 +100,9 @@ int	main(int ac, char **av)
 			else if (e.type == SDL_KEYUP && e.key.keysym.sym == SDLK_ESCAPE)
 				break;
 		}
-
 		SDL_SetRenderDrawColor(wolf->sdl->renderer, 0, 0, 0, 255);
 		SDL_RenderClear(wolf->sdl->renderer);
 
-//		for( unsigned int i = 0; i < 1000; i++ )
-//		{
-//			const unsigned int x = rand() % 400;
-//			const unsigned int y = rand() % 200;
-//
-//			const unsigned int offset = ( 800 * 4 * y ) + x * 4;
-//			wolf->draw_buffer[ offset + 0 ] = 26;        // b
-//			wolf->draw_buffer[ offset + 1 ] = 26;        // g
-//			wolf->draw_buffer[ offset + 2 ] = 155;        // r
-//			wolf->draw_buffer[ offset + 3 ] = SDL_ALPHA_OPAQUE;    // a
-//		}
-
-
-//		if (f == 1)
-//		{
 		unsigned int x = 451;
 		unsigned int y = 251;
 
@@ -133,10 +116,10 @@ int	main(int ac, char **av)
 			unsigned int offset = ( 800 * 4 * y ) + x * 4;
 			unsigned int offset1 = ( 128 * 4 * y1 ) + x1 * 4;
 
-			wolf->draw_buffer[ offset + 0 ] = wall_buffer[2][offset1 + 0];	// b
-			wolf->draw_buffer[ offset + 1 ] = wall_buffer[2][offset1 + 1];	// g
-			wolf->draw_buffer[ offset + 2 ] = wall_buffer[2][offset1 + 2];	// r
-			wolf->draw_buffer[ offset + 3 ] = wall_buffer[2][offset1 + 3];	// a
+			wolf->draw_buffer[ offset + 0 ] = upixels[offset1 + 0];	// b
+			wolf->draw_buffer[ offset + 1 ] = upixels[offset1 + 1];	// g
+			wolf->draw_buffer[ offset + 2 ] = upixels[offset1 + 2];	// r
+			wolf->draw_buffer[ offset + 3 ] = upixels[offset1 + 3];	// a
 			if (j % 128 == 0)
 			{
 				y++;
@@ -151,9 +134,6 @@ int	main(int ac, char **av)
 			}
 			j++;
 		}
-//			f = 0;
-//		}
-
 
 		// Show what was drawn
 		SDL_UpdateTexture(wolf->sdl->screen, NULL, &wolf->draw_buffer[0], 800 * 4);
@@ -171,35 +151,5 @@ int	main(int ac, char **av)
 
 void draw_wall(t_wolf * wolf, Uint8 *w_p, int wall_pitch)
 {
-	unsigned int x = 451;
-	unsigned int y = 251;
 
-	unsigned int x1 = 0;
-	unsigned int y1 = 0;
-
-//	65025
-	int j = 0;
-	for (int i = 0; i < 127 * 127 * 4; i += 4)
-	{
-		unsigned int offset = ( 800 * 4 * y ) + x * 4;
-		unsigned int offset1 = ( 128 * 4 * y1 ) + x1 * 4;
-
-		wolf->draw_buffer[ offset + 0 ] = w_p[offset1 + 0];	// b
-		wolf->draw_buffer[ offset + 1 ] = w_p[offset1 + 1];	// g
-		wolf->draw_buffer[ offset + 2 ] = w_p[offset1 + 2];	// r
-		wolf->draw_buffer[ offset + 3 ] = w_p[offset1 + 3];	// a
-		if (j % 128 == 0)
-		{
-			y++;
-			y1++;
-			x = 451;
-			x1 = 0;
-		}
-		else
-		{
-			x++;
-			x1++;
-		}
-		j++;
-	}
 }
