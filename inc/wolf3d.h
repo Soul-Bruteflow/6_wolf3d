@@ -139,7 +139,7 @@ typedef struct		s_wolf
 	int 			tex_x;
 	int 			tex_y;
 
-	SDL_Texture		**walls;
+	SDL_Surface		**walls;
 	Uint8			**wall_buffer;
 	int 			wall_pitch;
 	int 			wall_height;

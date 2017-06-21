@@ -52,7 +52,7 @@ t_wolf	*wolf_init(t_wolf *w, Uint16 width, Uint16 height, const char *title)
 		wolf_error(MALLOCK_ERROR);
 
 
-	w->walls = (SDL_Texture**)malloc(sizeof(SDL_Texture*) * TEX_NBR);
+	w->walls = (SDL_Surface**)malloc(sizeof(SDL_Surface*) * TEX_NBR);
 	if (w->walls == NULL)
 		wolf_error(MALLOCK_ERROR);
 

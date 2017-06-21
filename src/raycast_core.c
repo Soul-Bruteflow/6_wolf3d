@@ -115,10 +115,10 @@ void	draw_texture(t_wolf *w)
 {
 	for(int y = w->draw_start; y < w->draw_end; y++)
 	{
-		int d = y * 256 - w->height * 128 + w->line_height * 128;  //256 and 128 factors to avoid floats
-		w->tex_y = ((d * TEX_HEIGHT) / w->line_height) / 256;
+//		int d = y * 256 - w->height * 128 + w->line_height * 128;  //256 and 128 factors to avoid floats
+//		w->tex_y = ((d * TEX_HEIGHT) / w->line_height) / 256;
 
-//		w->tex_y = ((y - 600 * 0.5f + w->line_height * 0.5f) * 128) / w->line_height;
+		w->tex_y = (int)((y - 600 * 0.5 + w->line_height * 0.5) * 128) / w->line_height;
 
 
 		unsigned int offs = (unsigned int)(800 * 4 * y) + w->ray_per_x * 4;
