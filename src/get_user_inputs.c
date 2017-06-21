@@ -28,6 +28,20 @@ void	get_user_inputs(t_wolf *wolf)
 	}
 	if (SDL_KEYDOWN && wolf->key_state[SDL_SCANCODE_W])
 	{
+		if (wolf->step_counter % 15 == 0 && wolf->music_pause_flag == 0)
+		{
+			if (wolf->step == 0)
+			{
+				Mix_PlayChannel(1, wolf->step_1, 0);
+				wolf->step = 1;
+			}
+			else if (wolf->step == 1)
+			{
+				Mix_PlayChannel(2, wolf->step_2, 0);
+				wolf->step = 0;
+			}
+		}
+		wolf->step_counter += 1;
 		if(wolf->world_map[(int)(wolf->pos_x + wolf->dir_x * wolf->move_speed)][(int)(wolf->pos_y)] == 0) wolf->pos_x += wolf->dir_x * wolf->move_speed;
 		if(wolf->world_map[(int)(wolf->pos_x)][(int)(wolf->pos_y + wolf->dir_y * wolf->move_speed)] == 0) wolf->pos_y += wolf->dir_y * wolf->move_speed;
 	}
@@ -58,5 +72,9 @@ void	get_user_inputs(t_wolf *wolf)
 		wolf->old_plane_x = wolf->plane_x;
 		wolf->plane_x = wolf->plane_x * cosf(wolf->rot_speed) - wolf->plane_y * sinf(wolf->rot_speed);
 		wolf->plane_y = wolf->old_plane_x * sinf(wolf->rot_speed) + wolf->plane_y * cosf(wolf->rot_speed);
+	}
+	if (SDL_KEYDOWN && wolf->key_state[SDL_SCANCODE_P])
+	{
+		Mix_PlayMusic(wolf->theme_1, 3);
 	}
 }

@@ -29,6 +29,17 @@ void	update_time(t_wolf *wolf)
 	wolf->frame_time = (wolf->time - wolf->old_time) / 1000.0f;
 	wolf->move_speed = wolf->frame_time * 5.0f; //the constant value is in squares/second
 	wolf->rot_speed = wolf->frame_time * 3.0f; //the constant value is in radians/second
+
+	if (wolf->fps_counter % 10 == 0)
+	{
+		char *tmp = ft_itoa(1.0 / wolf->frame_time);
+		wolf->fps[0] = tmp[0];
+		wolf->fps[1] = tmp[1];
+		wolf->fps[2] = tmp[2];
+		wolf->fps[3] = '\0';
+	}
+	wolf->fps_counter++;
+
 //		print(1.0 / wolf->frame_time); //FPS counter
 //		redraw();
 }
@@ -51,9 +62,9 @@ void	game_loop(t_wolf *wolf)
 	while ((running(&wolf->sdl->event, &wolf->key_state)))
 	{
 		raycast_core(wolf);
-		update_time(wolf);
 		world_clear(wolf);
 		world_update(wolf);
+		update_time(wolf);
 		get_user_inputs(wolf);
 	}
 //		ft_noise(wolf);

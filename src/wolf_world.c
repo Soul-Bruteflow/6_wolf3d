@@ -41,8 +41,13 @@ void	world_clear(t_wolf *wolf)
 
 void	world_update(t_wolf *wolf)
 {
+
+	wolf->sur_message = TTF_RenderText_Blended(wolf->font, wolf->fps, wolf->white);
+	wolf->tex_message = SDL_CreateTextureFromSurface(wolf->sdl->renderer, wolf->sur_message);
+
 	SDL_UpdateTexture(wolf->sdl->screen, NULL, &wolf->draw_buffer[0], 800 * 4);
 	SDL_RenderCopy(wolf->sdl->renderer, wolf->sdl->screen, NULL, NULL);
+	SDL_RenderCopy(wolf->sdl->renderer, wolf->tex_message, NULL, &wolf->message_rect);
 	SDL_RenderPresent(wolf->sdl->renderer);
 	bzero(wolf->draw_buffer, 800 * 600 * 4);
 }

@@ -19,6 +19,7 @@
 # include <SDL2/SDL.h>
 # include <SDL2_image/SDL_image.h>
 # include <SDL2_ttf/SDL_ttf.h>
+# include <SDL2_mixer/SDL_mixer.h>
 
 /*
 ** SDL
@@ -144,6 +145,20 @@ typedef struct		s_wolf
 	int 			wall_pitch;
 	int 			wall_height;
 	int 			wall_width;
+
+	TTF_Font 		*font;
+	SDL_Color 		white;
+	SDL_Surface		*sur_message;
+	SDL_Texture		*tex_message;
+	SDL_Rect 		message_rect;
+	char			fps[4];
+	int 			fps_counter;
+	Mix_Chunk		*step_1;
+	Mix_Chunk		*step_2;
+	Mix_Music		*theme_1;
+	int 			step;
+	int				step_counter;
+	int 			music_pause_flag;
 }					t_wolf;
 
 /*
