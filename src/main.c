@@ -18,7 +18,9 @@ int		main(int ac, char **av)
 
 	if (ac == 2)
 	{
-		wolf = NULL;
+		wolf = (t_wolf*)malloc(sizeof(t_wolf));
+		if (wolf == NULL)
+			wolf_error(MALLOCK_ERROR);
 		wolf = wolf_init(wolf, 800, 600, "wolf3d, \0");
 		wolf->av = av;
 		map_parser(wolf);

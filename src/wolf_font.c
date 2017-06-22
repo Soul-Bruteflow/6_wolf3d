@@ -3,7 +3,7 @@
 void	wolf_font_init(t_wolf *w)
 {
 	TTF_Init();
-	w->font = TTF_OpenFont("Sans.ttf", 20);
+	w->font = TTF_OpenFont("./resources/fonts/Sans.ttf", 20);
 	w->white.r = 255;
 	w->white.g = 255;
 	w->white.b = 255;

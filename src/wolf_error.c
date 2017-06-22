@@ -47,7 +47,7 @@ void	wolf_error(Uint8 error_code)
 		print_error_and_exit("File open error.", 0);
 	else if (error_code == GNL_ERROR)
 		print_error_and_exit("GNL error.", 0);
-	else if (error_code == EMPTY_MAP_ERROR || SMALL_MAP_ERROR || BIG_MAP_ERROR
-			|| LINE_ERROR)
+	else if (error_code == EMPTY_MAP_ERROR || error_code == SMALL_MAP_ERROR ||
+			error_code == BIG_MAP_ERROR || error_code == LINE_ERROR)
 		print_error_and_exit("Map error.", 0);
 }

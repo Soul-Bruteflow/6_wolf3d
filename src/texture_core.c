@@ -49,16 +49,16 @@ void	draw_texture(t_wolf *w)
 
 void	assign_textures(t_wolf *w)
 {
-	w->walls[0] = IMG_Load("./textures/wall0.bmp");
-	w->walls[1] = IMG_Load("./textures/wall1.bmp");
-	w->walls[2] = IMG_Load("./textures/wall2.bmp");
-	w->walls[3] = IMG_Load("./textures/wall3.bmp");
-	w->walls[4] = IMG_Load("./textures/wall4.bmp");
-	w->walls[5] = IMG_Load("./textures/wall5.bmp");
-	w->walls[6] = IMG_Load("./textures/wall6.bmp");
-	w->walls[7] = IMG_Load("./textures/wall7.bmp");
-	w->walls[8] = IMG_Load("./textures/wall8.bmp");
-	w->walls[9] = IMG_Load("./textures/wall9.bmp");
+	w->walls[0] = IMG_Load("./resources/textures/wall0.bmp");
+	w->walls[1] = IMG_Load("./resources/textures/wall1.bmp");
+	w->walls[2] = IMG_Load("./resources/textures/wall2.bmp");
+	w->walls[3] = IMG_Load("./resources/textures/wall3.bmp");
+	w->walls[4] = IMG_Load("./resources/textures/wall4.bmp");
+	w->walls[5] = IMG_Load("./resources/textures/wall5.bmp");
+	w->walls[6] = IMG_Load("./resources/textures/wall6.bmp");
+	w->walls[7] = IMG_Load("./resources/textures/wall7.bmp");
+	w->walls[8] = IMG_Load("./resources/textures/wall8.bmp");
+	w->walls[9] = IMG_Load("./resources/textures/wall9.bmp");
 }
 
 void	texture_core(t_wolf *w)

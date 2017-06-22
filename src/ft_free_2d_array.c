@@ -3,7 +3,7 @@
 
 void	ft_free_2d_array(void **array, size_t y)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i < y)
