@@ -10,22 +10,8 @@ void	map_parser(t_wolf *w)
 	w->map_center_y = (Uint16)(w->map_size_y / 2);
 	w->map_center_x = (Uint16)(w->map_size_x / 2);
 	w->world_map = (Uint8**)ft_malloc_2d_array(sizeof(w->world_map),
-											   w->map_size_x, w->map_size_y);
+			w->map_size_x, w->map_size_y);
 	parser_second_read(w);
 	if (parser_final_validation(w) == false)
 		exit (0);
-
-//	int y = 0;
-//	int x = 0;
-//	while (y < 30)
-//	{
-//		x = 0;
-//		while (x < 30)
-//		{
-//			printf("%d", w->world_map[y][x]);
-//			x++;
-//		}
-//		printf("\n");
-//		y++;
-//	}
 }

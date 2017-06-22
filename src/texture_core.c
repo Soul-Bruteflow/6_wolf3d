@@ -1,5 +1,52 @@
 #include "wolf3d.h"
 
+void	wolf_texture_calculate(t_wolf *w)
+{
+	w->tex_num = w->world_map[w->mapx][w->mapy] - 1;
+	if (w->side == 0)
+		w->wall_x = w->ray_pos_y + w->perp_wall_dist * w->ray_dir_y;
+	else
+		w->wall_x = w->ray_pos_x + w->perp_wall_dist * w->ray_dir_x;
+	w->wall_x -= floorf(w->wall_x);
+	w->tex_x = (int)(w->wall_x * TEX_WIDTH);
+	if(w->side == 0 && w->ray_dir_x > 0)
+		w->tex_x = TEX_WIDTH - w->tex_x - 1;
+	if(w->side == 1 && w->ray_dir_y < 0)
+		w->tex_x = TEX_WIDTH - w->tex_x - 1;
+}
+
+void	draw_texture(t_wolf *w)
+{
+	unsigned int offs;
+	unsigned int offs1;
+
+	for(int y = w->draw_start; y < w->draw_end; y++)
+	{
+		w->tex_y = (int)((y - 600 * 0.5 + w->line_height * 0.5)
+						 * 128) / w->line_height;
+		offs = (unsigned int)(800 * 4 * y) + w->ray_per_x * 4;
+		offs1 = (unsigned int)(128 * 4 * w->tex_y) + w->tex_x * 4;
+		if(w->side == 1)
+		{
+			w->draw_buffer[ offs + 0 ] =
+					(Uint8)(w->wall_buffer[w->tex_num][offs1 + 0] / 2);
+			w->draw_buffer[ offs + 1 ] =
+					(Uint8)(w->wall_buffer[w->tex_num][offs1 + 1] / 2);
+			w->draw_buffer[ offs + 2 ] =
+					(Uint8)(w->wall_buffer[w->tex_num][offs1 + 2] / 2);
+			w->draw_buffer[ offs + 3 ] =
+					(Uint8)(w->wall_buffer[w->tex_num][offs1 + 3] / 2);
+		}
+		else
+		{
+			w->draw_buffer[ offs + 0 ] = w->wall_buffer[w->tex_num][offs1 + 0];
+			w->draw_buffer[ offs + 1 ] = w->wall_buffer[w->tex_num][offs1 + 1];
+			w->draw_buffer[ offs + 2 ] = w->wall_buffer[w->tex_num][offs1 + 2];
+			w->draw_buffer[ offs + 3 ] = w->wall_buffer[w->tex_num][offs1 + 3];
+		}
+	}
+}
+
 void	assign_textures(t_wolf *w)
 {
 	w->walls[0] = IMG_Load("./textures/wall0.bmp");

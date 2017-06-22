@@ -13,10 +13,10 @@ t_bool verLine(int x, int y1, int y2, t_rgb color, t_wolf *wolf, int w, int h)
 	for(int y = y1; y <= y2; y++)
 	{
 		wolf->offset = (size_t)((w * 4 * y) + x * 4);
-		wolf->draw_buffer[wolf->offset + 0] = color.b;			// b
-		wolf->draw_buffer[wolf->offset + 1] = color.g;			// g
-		wolf->draw_buffer[wolf->offset + 2] = color.r;			// r
-		wolf->draw_buffer[wolf->offset + 3] = SDL_ALPHA_OPAQUE;	// a
+		wolf->draw_buffer[wolf->offset + 0] = color.b;
+		wolf->draw_buffer[wolf->offset + 1] = color.g;
+		wolf->draw_buffer[wolf->offset + 2] = color.r;
+		wolf->draw_buffer[wolf->offset + 3] = SDL_ALPHA_OPAQUE;
 	}
 	return (true);
 }

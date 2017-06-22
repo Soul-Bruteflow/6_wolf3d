@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <SDL2/SDL_stdinc.h>
 #include "wolf3d.h"
 
 void	**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y)

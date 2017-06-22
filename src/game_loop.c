@@ -27,31 +27,27 @@ void	update_time(t_wolf *wolf)
 	wolf->old_time = wolf->time;
 	wolf->time = SDL_GetTicks();
 	wolf->frame_time = (wolf->time - wolf->old_time) / 1000.0f;
-	wolf->move_speed = wolf->frame_time * 5.0f; //the constant value is in squares/second
-	wolf->rot_speed = wolf->frame_time * 3.0f; //the constant value is in radians/second
-
+	wolf->move_speed = wolf->frame_time * 5.0f;
+	wolf->rot_speed = wolf->frame_time * 3.0f;
 	if (wolf->fps_counter % 10 == 0)
 	{
-		char *tmp = ft_itoa(1.0 / wolf->frame_time);
+		char *tmp = ft_itoa((int)(1.0 / wolf->frame_time));
 		wolf->fps[0] = tmp[0];
 		wolf->fps[1] = tmp[1];
 		wolf->fps[2] = tmp[2];
 		wolf->fps[3] = '\0';
 	}
 	wolf->fps_counter++;
-
-//		print(1.0 / wolf->frame_time); //FPS counter
-//		redraw();
 }
 
 void	raycast_init(t_wolf *wolf)
 {
-	wolf->pos_x = 2;
-	wolf->pos_y = 2;
+	wolf->pos_x = wolf->map_width / 2;
+	wolf->pos_y = wolf->map_height / 2;
 	wolf->dir_x = 1;
 	wolf->dir_y = 0;
 	wolf->plane_x = 0;
-	wolf->plane_y = -0.70f;
+	wolf->plane_y = -0.67f;
 	wolf->time = 0;
 	wolf->old_time = 0;
 }
@@ -59,6 +55,8 @@ void	raycast_init(t_wolf *wolf)
 void	game_loop(t_wolf *wolf)
 {
 	raycast_init(wolf);
+	wolf_font_init(wolf);
+	wolf_audio_init(wolf);
 	while ((running(&wolf->sdl->event, &wolf->key_state)))
 	{
 		raycast_core(wolf);
@@ -67,5 +65,4 @@ void	game_loop(t_wolf *wolf)
 		update_time(wolf);
 		get_user_inputs(wolf);
 	}
-//		ft_noise(wolf);
-	}
+}

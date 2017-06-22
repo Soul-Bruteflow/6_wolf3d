@@ -31,7 +31,8 @@ t_bool	validate_borders(t_wolf *w)
 		return (false);
 	if (!border_run(1, w->map_height, w->map_width, w->map_height, w))
 		return (false);
-	if (!border_run(w->map_width, 1, w->map_width, (Uint16)(w->map_height - 1), w))
+	if (!border_run(w->map_width, 1, w->map_width,
+			(Uint16)(w->map_height - 1), w))
 		return (false);
 	return (true);
 }

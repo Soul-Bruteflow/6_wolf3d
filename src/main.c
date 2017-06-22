@@ -12,8 +12,6 @@
 
 #include "wolf3d.h"
 
-
-
 int		main(int ac, char **av)
 {
 	t_wolf *wolf;
@@ -24,7 +22,6 @@ int		main(int ac, char **av)
 		wolf = wolf_init(wolf, 800, 600, "wolf3d, \0");
 		wolf->av = av;
 		map_parser(wolf);
-//		raycast_init(wolf);
 		wolf->pitch = 800 *4;
 		wolf->offset = 0;
 		game_loop(wolf);

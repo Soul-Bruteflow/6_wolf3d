@@ -159,6 +159,17 @@ typedef struct		s_wolf
 	int 			step;
 	int				step_counter;
 	int 			music_pause_flag;
+
+	float 			floor_x_wall;
+	float 			floor_y_wall;
+	float			dist_wall;
+	float			dist_player;
+	float			current_dist;
+	float 			weight;
+	float			current_floot_x;
+	float			current_floot_y;
+	int 			floor_tex_x;
+	int 			floor_tex_y;
 }					t_wolf;
 
 /*
@@ -213,6 +224,7 @@ t_bool				parser_final_validation(t_wolf *w);
 /*
 ** Support
 */
+void	wolf_font_init(t_wolf *w);
 void				**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y);
 void				ft_free_2d_array(void **array, size_t y);
 void 				ft_xor_swap(int *a, int *b);
@@ -228,4 +240,22 @@ void	tmp(t_wolf *w);
 ** Textures
 */
 void	texture_core(t_wolf *w);
+void	wolf_texture_calculate(t_wolf *w);
+void	draw_texture(t_wolf *w);
+void	floor_celing_core(t_wolf *w);
+void	floor_celing_draw(t_wolf *w);
+
+/*
+** Sound
+*/
+void	wolf_audio_init(t_wolf *w);
+void	footsteps_sound(t_wolf *w);
+
+/*
+** Movement
+*/
+void	move_forward(t_wolf *w);
+void	move_backwards(t_wolf *w);
+void	rotate_right(t_wolf *w);
+void	rotate_left(t_wolf *w);
 #endif

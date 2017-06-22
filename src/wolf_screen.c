@@ -72,31 +72,6 @@ void	create_screen(t_wolf *w, Uint16 wdth, Uint16 hght, const char *title)
 	screen_size(w, wdth, hght);
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		wolf_error(INIT_ERROR);
-
-
-	TTF_Init();
-	w->font = TTF_OpenFont("Sans.ttf", 20);
-	w->white.r = 255;
-	w->white.g = 255;
-	w->white.b = 255;
-	w->message_rect.x = 5;
-	w->message_rect.y = 5;
-	w->message_rect.w = 40;
-	w->message_rect.h = 35;
-	w->fps_counter = 0;
-
-
-	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
-	w->step_1 = Mix_LoadWAV("pl_metal1.wav");
-	w->step_2 = Mix_LoadWAV("pl_metal2.wav");
-	w->theme_1 = Mix_LoadMUS("theme.wav");
-	w->step = 0;
-	w->step_counter = 0;
-	w->music_pause_flag = 0;
-	Mix_Volume(1,MIX_MAX_VOLUME/20);
-	Mix_Volume(2,MIX_MAX_VOLUME/20);
-	Mix_VolumeMusic(10);
-
 	w->sdl->window = SDL_CreateWindow(w->win_title_update,
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 			w->width, w->height, SDL_WINDOW_OPENGL);
