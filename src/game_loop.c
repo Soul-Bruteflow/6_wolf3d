@@ -36,6 +36,7 @@ void	update_time(t_wolf *wolf)
 		wolf->fps[1] = tmp[1];
 		wolf->fps[2] = tmp[2];
 		wolf->fps[3] = '\0';
+        free(tmp);
 	}
 	wolf->fps_counter++;
 }

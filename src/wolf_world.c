@@ -45,6 +45,7 @@ void	world_update(t_wolf *wolf)
 			wolf->fps, wolf->white);
 	wolf->tex_message = SDL_CreateTextureFromSurface(wolf->sdl->renderer,
 			wolf->sur_message);
+    SDL_FreeSurface(wolf->sur_message);
 	SDL_UpdateTexture(wolf->sdl->screen, NULL, &wolf->draw_buffer[0], 800 * 4);
 	SDL_RenderCopy(wolf->sdl->renderer, wolf->sdl->screen, NULL, NULL);
 	SDL_RenderCopy(wolf->sdl->renderer, wolf->tex_message,

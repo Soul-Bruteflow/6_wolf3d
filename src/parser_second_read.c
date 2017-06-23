@@ -21,7 +21,7 @@ Uint8	parse_map_tile(t_wolf *w, int x)
 void	parser_second_read(t_wolf *w)
 {
 	int i;
-
+    
 	i = 0;
 	open_file(w);
 	w->map_y = 0;

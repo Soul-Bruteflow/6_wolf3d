@@ -27,7 +27,6 @@ static t_list	*file_manage(t_list **head, const int fd)
 	}
 	current = ft_lstnew("\0", file_des);
 	ft_lstadd(head, current);
-	current->content = 0;
 	current = *head;
 	return (current);
 }
@@ -104,7 +103,7 @@ int				get_next_line(const int fd, char **line)
 	int					k;
 	char				*buf;
 	static t_list		*head;
-	t_list				*current;
+    t_list              *current;
 	ssize_t				read_size;
 
 	if (BUFF_SIZE > 10000 || BUFF_SIZE < 1)
@@ -118,6 +117,7 @@ int				get_next_line(const int fd, char **line)
 	if (read_size < BUFF_SIZE && !ft_strlen(current->content))
 	{
 		free(buf);
+        ft_strdel((char**)&head->content);
 		return (0);
 	}
 	read_size = gnl_magic(line, current->content, '\n');

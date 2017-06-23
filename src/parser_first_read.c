@@ -21,7 +21,7 @@ static Uint16	count_symbols(t_wolf *w)
 void	parser_first_read(t_wolf *w)
 {
 	int i;
-
+    
 	w->map_x = 0;
 	w->map_y = 0;
 	open_file(w);
