@@ -6,7 +6,7 @@
 #    By: bruteflow <bruteflow@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 14:24:38 by mvlad             #+#    #+#              #
-#    Updated: 2017/06/22 20:31:33 by bruteflow        ###   ########.fr        #
+#    Updated: 2017/06/26 11:36:17 by bruteflow        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ all: $(NAME)
 
 $(NAME): $(addprefix $(OBJ_DIR), $(OBJ))
 	$(MAKE) -C ./libft/
-	$(CC) $(SDL) $(CFLAGS) $(LIB_LIB) $^ $(OUT_OPT) $(NAME)
+	$(CC) $(CFLAGS) $(SDL) $(LIB_LIB) $^ $(OUT_OPT) $(NAME)
 
 clean:
 	$(RMF) $(addprefix $(OBJ_DIR), $(OBJ))
