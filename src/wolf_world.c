@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wolf_world.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 12:26:59 by mvlad             #+#    #+#             */
-/*   Updated: 2017/06/08 12:27:59 by mvlad            ###   ########.fr       */
+/*   Updated: 2017/10/07 16:18:30 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	world_update(t_wolf *wolf)
 			wolf->fps, wolf->white);
 	wolf->tex_message = SDL_CreateTextureFromSurface(wolf->sdl->renderer,
 			wolf->sur_message);
-    SDL_FreeSurface(wolf->sur_message);
+	SDL_FreeSurface(wolf->sur_message);
 	SDL_UpdateTexture(wolf->sdl->screen, NULL, &wolf->draw_buffer[0], 800 * 4);
 	SDL_RenderCopy(wolf->sdl->renderer, wolf->sdl->screen, NULL, NULL);
 	SDL_RenderCopy(wolf->sdl->renderer, wolf->tex_message,

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   map_parser.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 11:38:31 by mvlad             #+#    #+#             */
+/*   Updated: 2017/10/07 15:03:51 by mvlad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "wolf3d.h"
 
 void	map_parser(t_wolf *w)
@@ -13,5 +25,5 @@ void	map_parser(t_wolf *w)
 			w->map_size_x, w->map_size_y);
 	parser_second_read(w);
 	if (parser_final_validation(w) == false)
-		exit (0);
+		exit(0);
 }

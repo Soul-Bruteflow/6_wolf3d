@@ -51,7 +51,7 @@ static size_t	gnl_magic(char **dst, char *src, const char delim)
 	return (i);
 }
 
-static void		gnl_i_ll_be_back(char **s, char delim)
+static void		rem(char **s, char delim)
 {
 	char			*tmp;
 	unsigned int	i;
@@ -103,27 +103,26 @@ int				get_next_line(const int fd, char **line)
 	int					k;
 	char				*buf;
 	static t_list		*head;
-    t_list              *current;
+	t_list				*c;
 	ssize_t				read_size;
 
 	if (BUFF_SIZE > 10000 || BUFF_SIZE < 1)
 		return (-1);
 	buf = (char*)malloc(sizeof(char) * BUFF_SIZE + 1);
 	PROTECT_N2(line, fd, (read(fd, buf, 0)));
-	current = file_manage(&head, fd);
-	k = gnl_loop(current, buf, &read_size, fd);
+	c = file_manage(&head, fd);
+	k = gnl_loop(c, buf, &read_size, fd);
 	if (k == -1)
 		return (-1);
-	if (read_size < BUFF_SIZE && !ft_strlen(current->content))
+	if (read_size < BUFF_SIZE && !ft_strlen(c->content))
 	{
 		free(buf);
-        ft_strdel((char**)&head->content);
+		ft_strdel((char**)&head->content);
 		return (0);
 	}
-	read_size = gnl_magic(line, current->content, '\n');
-	(read_size < (int)ft_strlen(current->content))
-	? (gnl_i_ll_be_back((char**)&current->content, '\n'))
-	: (ft_strdel((char**)&current->content));
+	read_size = gnl_magic(line, c->content, '\n');
+	(read_size < (int)ft_strlen(c->content)) ? (rem((char**)&c->content, '\n'))
+	: (ft_strdel((char**)&c->content));
 	free(buf);
 	return (1);
 }

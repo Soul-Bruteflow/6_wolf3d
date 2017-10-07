@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 12:13:15 by mvlad             #+#    #+#             */
-/*   Updated: 2017/06/08 12:14:44 by mvlad            ###   ########.fr       */
+/*   Updated: 2017/10/07 15:03:16 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(int ac, char **av)
 		wolf = wolf_init(wolf, 800, 600, "wolf3d, \0");
 		wolf->av = av;
 		map_parser(wolf);
-		wolf->pitch = 800 *4;
+		wolf->pitch = 800 * 4;
 		wolf->offset = 0;
 		game_loop(wolf);
 		quit(wolf);
@@ -32,4 +32,3 @@ int		main(int ac, char **av)
 	else
 		wolf_error(USSAGE_ERROR);
 }
-

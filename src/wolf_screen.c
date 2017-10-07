@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wolf_screen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 12:26:00 by mvlad             #+#    #+#             */
-/*   Updated: 2017/06/08 12:26:43 by mvlad            ###   ########.fr       */
+/*   Updated: 2017/10/07 16:17:42 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,12 @@ void	screen_size(t_wolf *w, Uint16 width, Uint16 height)
 
 void	create_buffer(Uint8 **draw_buffer, Uint16 width, Uint16 height)
 {
-//	size_t buff_len;
-//	size_t buf_size;
-
 	if (*draw_buffer == NULL)
 	{
 		*draw_buffer = (Uint8*)malloc(sizeof(Uint8) * width * height * 4);
 		if (*draw_buffer == NULL)
 			wolf_error(MALLOCK_ERROR);
 	}
-//	else
-//	{
-//		buf_size = sizeof(Uint8) * width * height * 4;
-//		buff_len = sizeof(draw_buffer) / sizeof(draw_buffer[0]);
-//		if (buff_len != buf_size)
-//		{
-//			free(*draw_buffer);
-//			*draw_buffer = (Uint8*)malloc(sizeof(Uint8) * width * height * 4);
-//			if (*draw_buffer == NULL)
-//				wolf_error(MALLOCK_ERROR);
-//		}
-//	}
 }
 
 void	screen_title(t_wolf *w)
@@ -64,8 +49,8 @@ void	screen_title(t_wolf *w)
 	win_size_text = ft_strcat(win_width_text, "x");
 	win_size_text = ft_strcat(win_width_text, win_height_text);
 	w->win_title_update = ft_strjoin(w->win_title, win_size_text);
-    free(win_width_text);
-    free(win_height_text);
+	free(win_width_text);
+	free(win_height_text);
 }
 
 void	create_screen(t_wolf *w, Uint16 wdth, Uint16 hght, const char *title)

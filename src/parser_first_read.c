@@ -1,16 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser_first_read.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 11:38:31 by mvlad             #+#    #+#             */
+/*   Updated: 2017/10/07 15:06:34 by mvlad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "wolf3d.h"
 
 static Uint16	count_symbols(t_wolf *w)
 {
 	char			*s;
 	Uint16			i;
+	int				tmp1;
+	int				tmp2;
 
 	i = 0;
 	s = w->line;
 	while (s[i])
 	{
-		int tmp1 = ft_isalpha(s[i]);
-		int tmp2 = ft_isdigit(s[i]);
+		tmp1 = ft_isalpha(s[i]);
+		tmp2 = ft_isdigit(s[i]);
 		if (tmp1 == 0 && tmp2 == 0)
 			wolf_error(LINE_ERROR);
 		i++;
@@ -18,10 +32,10 @@ static Uint16	count_symbols(t_wolf *w)
 	return (i);
 }
 
-void	parser_first_read(t_wolf *w)
+void			parser_first_read(t_wolf *w)
 {
-	int i;
-    
+	int				i;
+
 	w->map_x = 0;
 	w->map_y = 0;
 	open_file(w);

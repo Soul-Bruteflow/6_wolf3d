@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_noise.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 12:19:23 by mvlad             #+#    #+#             */
-/*   Updated: 2017/06/08 12:19:35 by mvlad            ###   ########.fr       */
+/*   Updated: 2017/10/07 14:58:47 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf3d.h"
+
+/*
+** bgra
+*/
 
 void	ft_noise(t_wolf *wolf)
 {
@@ -25,10 +29,10 @@ void	ft_noise(t_wolf *wolf)
 		x = (Uint16)(rand() % wolf->width);
 		y = (Uint16)(rand() % wolf->height);
 		offset = (Uint32)((wolf->width * 4 * y) + x * 4);
-		wolf->draw_buffer[offset + 0] = (Uint8)(rand() % 256);			// b
-		wolf->draw_buffer[offset + 1] = (Uint8)(rand() % 256);			// g
-		wolf->draw_buffer[offset + 2] = (Uint8)(rand() % 256);			// r
-		wolf->draw_buffer[offset + 3] = SDL_ALPHA_OPAQUE;				// a
+		wolf->draw_buffer[offset + 0] = (Uint8)(rand() % 256);
+		wolf->draw_buffer[offset + 1] = (Uint8)(rand() % 256);
+		wolf->draw_buffer[offset + 2] = (Uint8)(rand() % 256);
+		wolf->draw_buffer[offset + 3] = SDL_ALPHA_OPAQUE;
 		i++;
 	}
 }

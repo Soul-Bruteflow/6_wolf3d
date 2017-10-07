@@ -6,7 +6,7 @@
 #    By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 14:24:38 by mvlad             #+#    #+#              #
-#    Updated: 2017/10/07 13:29:19 by mvlad            ###   ########.fr        #
+#    Updated: 2017/10/07 15:26:41 by mvlad            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,6 @@ OBJ	=	floor_ceiling_core.o \
 		raycast_core.o \
 		texture_core.o \
 		wolf_audio.o \
-		wolf_draw_lines.o \
 		wolf_error.o \
 		wolf_font.o \
 		wolf_init.o \

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser_second_read.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 11:38:31 by mvlad             #+#    #+#             */
+/*   Updated: 2017/10/07 15:12:46 by mvlad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "wolf3d.h"
 
 /*
@@ -6,7 +18,7 @@
 
 Uint8	parse_map_tile(t_wolf *w, int x)
 {
-	Uint8 tmp = 0;
+	Uint8 tmp;
 
 	tmp = (Uint8)w->line[x];
 	if (tmp >= 48 && tmp <= 57)
@@ -21,7 +33,7 @@ Uint8	parse_map_tile(t_wolf *w, int x)
 void	parser_second_read(t_wolf *w)
 {
 	int i;
-    
+
 	i = 0;
 	open_file(w);
 	w->map_y = 0;

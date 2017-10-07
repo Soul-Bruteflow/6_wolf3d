@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   wolf_audio.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/04 11:38:31 by mvlad             #+#    #+#             */
+/*   Updated: 2017/10/07 15:23:35 by mvlad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "wolf3d.h"
 
 void	wolf_audio_init(t_wolf *w)
@@ -9,7 +21,7 @@ void	wolf_audio_init(t_wolf *w)
 	w->step = 0;
 	w->step_counter = 0;
 	w->music_pause_flag = 0;
-	Mix_Volume(1,MIX_MAX_VOLUME/20);
-	Mix_Volume(2,MIX_MAX_VOLUME/20);
+	Mix_Volume(1, MIX_MAX_VOLUME / 20);
+	Mix_Volume(2, MIX_MAX_VOLUME / 20);
 	Mix_VolumeMusic(5);
 }

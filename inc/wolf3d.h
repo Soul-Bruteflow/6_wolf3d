@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   wolf3d.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bruteflow <bruteflow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 13:21:31 by mvlad             #+#    #+#             */
-/*   Updated: 2017/06/23 19:24:58 by bruteflow        ###   ########.fr       */
+/*   Updated: 2017/10/07 14:30:53 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 # include "libft.h"
 # include "get_next_line.h"
 # include <math.h>
-# include <SDL.h>
-# include <SDL_image.h>
-# include <SDL_ttf.h>
-# include <SDL_mixer.h>
+# include <stdlib.h>
+# include <SDL2/SDL.h>
+# include <SDL2/SDL_image.h>
+# include <SDL2/SDL_ttf.h>
+# include <SDL2/SDL_mixer.h>
 
 /*
 ** SDL
@@ -43,8 +44,6 @@
 # define SMALL_MAP_ERROR 24
 # define BIG_MAP_ERROR 25
 # define LINE_ERROR 26
-
-Uint32 buffer[600][800];
 
 /*
 ** General
@@ -76,8 +75,8 @@ typedef struct		s_wolf
 	struct s_sdl	*sdl;
 	Uint16			width;
 	Uint16			height;
-	char 			*win_title;
-	char 			*win_title_update;
+	char			*win_title;
+	char			*win_title_update;
 	const Uint8		*key_state;
 	Uint8			*draw_buffer;
 	Uint16			map_x;
@@ -85,91 +84,87 @@ typedef struct		s_wolf
 	Uint16			map_center_x;
 	Uint16			map_center_y;
 	char			*line;
-	int 			fd;
+	int				fd;
 	Uint16			tmp;
 	char			**av;
 	Uint16			map_width;
-	Uint16 			map_height;
+	Uint16			map_height;
 	Uint16			map_size_y;
-	Uint16 			map_size_x;
+	Uint16			map_size_x;
 	Uint8			**world_map;
-	float 			pos_x;
-	float 			pos_y;
-	float 			dir_x;
-	float 			dir_y;
-	float 			plane_x;
+	float			pos_x;
+	float			pos_y;
+	float			dir_x;
+	float			dir_y;
+	float			plane_x;
 	float			plane_y;
-	float 			time;
-	float 			old_time;
-	float 			frame_time;
+	float			time;
+	float			old_time;
+	float			frame_time;
 	int				ray_per_x;
 	float			camera_x;
-	float 			ray_pos_x;
-	float 			ray_pos_y;
-	float 			ray_dir_x;
-	float 			ray_dir_y;
-	int 			mapx;
-	int 			mapy;
-	float 			side_dist_x;
-	float 			side_dist_y;
-	float 			delta_dist_x;
-	float 			delta_dist_y;
-	float 			perp_wall_dist;
-	int 			step_x;
-	int 			step_y;
-	int 			hit;
-	int 			side;
-	float 			sqr_ray_dir_y;
-	float 			sqr_ray_dir_x;
+	float			ray_pos_x;
+	float			ray_pos_y;
+	float			ray_dir_x;
+	float			ray_dir_y;
+	int				mapx;
+	int				mapy;
+	float			side_dist_x;
+	float			side_dist_y;
+	float			delta_dist_x;
+	float			delta_dist_y;
+	float			perp_wall_dist;
+	int				step_x;
+	int				step_y;
+	int				hit;
+	int				side;
+	float			sqr_ray_dir_y;
+	float			sqr_ray_dir_x;
 	int				draw_start;
-	int 			line_height;
-	int 			draw_end;
-	float 			move_speed;
-	float 			rot_speed;
-	float 			camera_y;
+	int				line_height;
+	int				draw_end;
+	float			move_speed;
+	float			rot_speed;
+	float			camera_y;
 	float			ray_per_y;
 	int				linewidth;
-	int 			pitch;
+	int				pitch;
 	size_t			offset;
 	size_t			old_offset;
 	float			old_dir_x;
-	float 			old_plane_x;
-
-	int 			tex_num;
-	float 			wall_x;
-	int 			tex_x;
-	int 			tex_y;
-
+	float			old_plane_x;
+	int				tex_num;
+	float			wall_x;
+	int				tex_x;
+	int				tex_y;
 	SDL_Surface		**walls;
 	Uint8			**wall_buffer;
-	int 			wall_pitch;
-	int 			wall_height;
-	int 			wall_width;
-
-	TTF_Font 		*font;
-	SDL_Color 		white;
+	int				wall_pitch;
+	int				wall_height;
+	int				wall_width;
+	TTF_Font		*font;
+	SDL_Color		white;
 	SDL_Surface		*sur_message;
 	SDL_Texture		*tex_message;
-	SDL_Rect 		message_rect;
+	SDL_Rect		message_rect;
 	char			fps[4];
-	int 			fps_counter;
+	int				fps_counter;
 	Mix_Chunk		*step_1;
 	Mix_Chunk		*step_2;
 	Mix_Music		*theme_1;
-	int 			step;
+	int				step;
 	int				step_counter;
-	int 			music_pause_flag;
-
-	float 			floor_x_wall;
-	float 			floor_y_wall;
+	int				music_pause_flag;
+	float			floor_x_wall;
+	float			floor_y_wall;
 	float			dist_wall;
 	float			dist_player;
 	float			current_dist;
-	float 			weight;
+	float			weight;
 	float			current_floot_x;
 	float			current_floot_y;
-	int 			floor_tex_x;
-	int 			floor_tex_y;
+	int				floor_tex_x;
+	int				floor_tex_y;
 }					t_wolf;
 
 /*
@@ -224,38 +219,31 @@ t_bool				parser_final_validation(t_wolf *w);
 /*
 ** Support
 */
-void	wolf_font_init(t_wolf *w);
+void				wolf_font_init(t_wolf *w);
 void				**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y);
 void				ft_free_2d_array(void **array, size_t y);
-void 				ft_xor_swap(int *a, int *b);
-/*
-**
-*/
-t_bool 				verLine(int x, int y1, int y2, t_rgb color, t_wolf *wolf, int w, int h);
-
-
-void	tmp(t_wolf *w);
+void				ft_xor_swap(int *a, int *b);
 
 /*
 ** Textures
 */
-void	texture_core(t_wolf *w);
-void	wolf_texture_calculate(t_wolf *w);
-void	draw_texture(t_wolf *w);
-void	floor_celing_core(t_wolf *w);
-void	floor_celing_draw(t_wolf *w);
+void				texture_core(t_wolf *w);
+void				wolf_texture_calculate(t_wolf *w);
+void				draw_texture(t_wolf *w);
+void				floor_celing_core(t_wolf *w);
+void				floor_celing_draw(t_wolf *w);
 
 /*
 ** Sound
 */
-void	wolf_audio_init(t_wolf *w);
-void	footsteps_sound(t_wolf *w);
+void				wolf_audio_init(t_wolf *w);
+void				footsteps_sound(t_wolf *w);
 
 /*
 ** Movement
 */
-void	move_forward(t_wolf *w);
-void	move_backwards(t_wolf *w);
-void	rotate_right(t_wolf *w);
-void	rotate_left(t_wolf *w);
+void				move_forward(t_wolf *w);
+void				move_backwards(t_wolf *w);
+void				rotate_right(t_wolf *w);
+void				rotate_left(t_wolf *w);
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game_loop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvlad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 12:20:48 by mvlad             #+#    #+#             */
-/*   Updated: 2017/06/08 12:23:23 by mvlad            ###   ########.fr       */
+/*   Updated: 2017/10/07 15:00:34 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ t_bool	running(SDL_Event *event, const Uint8 **key_state)
 
 void	update_time(t_wolf *wolf)
 {
+	char	*tmp;
+
 	wolf->old_time = wolf->time;
 	wolf->time = SDL_GetTicks();
 	wolf->frame_time = (wolf->time - wolf->old_time) / 1000.0f;
@@ -31,12 +33,12 @@ void	update_time(t_wolf *wolf)
 	wolf->rot_speed = wolf->frame_time * 3.0f;
 	if (wolf->fps_counter % 10 == 0)
 	{
-		char *tmp = ft_itoa((int)(1.0 / wolf->frame_time));
+		tmp = ft_itoa((int)(1.0 / wolf->frame_time));
 		wolf->fps[0] = tmp[0];
 		wolf->fps[1] = tmp[1];
 		wolf->fps[2] = tmp[2];
 		wolf->fps[3] = '\0';
-        free(tmp);
+		free(tmp);
 	}
 	wolf->fps_counter++;
 }
