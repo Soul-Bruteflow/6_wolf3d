@@ -16,7 +16,7 @@ Uint16	*set_xy(Uint16 start_x, Uint16 start_y, Uint16 end_x, Uint16 end_y)
 {
 	Uint16	*tmp;
 
-	tmp = malloc(4 * sizeof(*tmp));
+	tmp = malloc(4 * sizeof(tmp));
 	tmp[0] = start_x;
 	tmp[1] = start_y;
 	tmp[2] = end_x;
