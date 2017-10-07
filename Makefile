@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bruteflow <bruteflow@student.42.fr>        +#+  +:+       +#+         #
+#    By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 14:24:38 by mvlad             #+#    #+#              #
-#    Updated: 2017/06/26 11:36:17 by bruteflow        ###   ########.fr        #
+#    Updated: 2017/10/07 13:29:19 by mvlad            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,10 @@ SRC_DIR = ./src/
 OBJ_DIR = ./obj/
 INC_DIR = ./inc/
 FRM_DIR	= ./frameworks/
-SDL_INC	= $(FRM_DIR)SDL2.framework/Versions/A/Headers
-SDL_TTF = $(FRM_DIR)SDL2_ttf.framework/Versions/A/Headers
-SDL_IMG = $(FRM_DIR)SDL2_image.framework/Versions/A/Headers
-SDL_MIX = $(FRM_DIR)SDL2_mixer.framework/Versions/A/Headers
+SDL_INC	= $(FRM_DIR)SDL2.framework/Headers
+SDL_TTF = $(FRM_DIR)SDL2_ttf.framework/Headers
+SDL_IMG = $(FRM_DIR)SDL2_image.framework//Headers
+SDL_MIX = $(FRM_DIR)SDL2_mixer.framework/Headers
 LIB_DIR = ./libft/
 LIB_INC = $(LIB_DIR)
 LIB_LIB = $(LIB_DIR)libft.a
@@ -72,6 +72,10 @@ all: $(NAME)
 
 $(NAME): $(addprefix $(OBJ_DIR), $(OBJ))
 	$(MAKE) -C ./libft/
+	@mkdir -p ~/Library
+	@mkdir -p ~/Library/Frameworks
+	@rm -rf ~/Library/Frameworks/SDL2.framework ~/Library/Frameworks/SDL2_image.framework ~/Library/Frameworks/SDL2_mixer.framework ~/Library/Frameworks/SDL2_ttf.framework
+	@cp -R -i ./frameworks/SDL2.framework ./frameworks/SDL2_image.framework ./frameworks/SDL2_mixer.framework ./frameworks/SDL2_ttf.framework ~/Library/Frameworks
 	$(CC) $(CFLAGS) $(SDL) $(LIB_LIB) $^ $(OUT_OPT) $(NAME)
 
 clean:
