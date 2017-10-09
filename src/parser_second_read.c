@@ -6,7 +6,7 @@
 /*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 11:38:31 by mvlad             #+#    #+#             */
-/*   Updated: 2017/10/07 15:12:46 by mvlad            ###   ########.fr       */
+/*   Updated: 2017/10/09 10:56:29 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ Uint8	parse_map_tile(t_wolf *w, int x)
 	tmp = (Uint8)w->line[x];
 	if (tmp >= 48 && tmp <= 57)
 		tmp -= '0';
-//	else if (tmp >= 65 && tmp <= 90)
-//		tmp -= 55;
-//	else if (tmp >= 97 && tmp <= 122)
-//		tmp -= 61;
+	else
+	{
+		tmp = 48;
+		tmp -= '0';
+	}
 	return (tmp);
 }
 
