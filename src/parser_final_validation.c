@@ -12,19 +12,19 @@
 
 #include "wolf3d.h"
 
-Uint16	*set_xy(Uint16 start_x, Uint16 start_y, Uint16 end_x, Uint16 end_y)
+static Uint16	*set_xy(Uint16 beg_x, Uint16 beg_y, Uint16 end_x, Uint16 end_y)
 {
 	Uint16	*tmp;
 
 	tmp = malloc(4 * sizeof(tmp));
-	tmp[0] = start_x;
-	tmp[1] = start_y;
+	tmp[0] = beg_x;
+	tmp[1] = beg_y;
 	tmp[2] = end_x;
 	tmp[3] = end_y;
 	return (tmp);
 }
 
-t_bool	border_run(Uint16 *tmp, t_wolf *w)
+static t_bool	border_run(Uint16 *tmp, t_wolf *w)
 {
 	if (tmp[0] == tmp[2])
 	{
@@ -48,7 +48,7 @@ t_bool	border_run(Uint16 *tmp, t_wolf *w)
 	return (true);
 }
 
-t_bool	validate_borders(t_wolf *w)
+static t_bool	validate_borders(t_wolf *w)
 {
 	if (!border_run((set_xy(0, 0, w->map_width, 0)), w))
 		return (false);
@@ -62,7 +62,7 @@ t_bool	validate_borders(t_wolf *w)
 	return (true);
 }
 
-t_bool	validate_center(t_wolf *w)
+static t_bool	validate_center(t_wolf *w)
 {
 	Uint16 i;
 	Uint16 j;
@@ -82,7 +82,7 @@ t_bool	validate_center(t_wolf *w)
 	return (true);
 }
 
-t_bool	parser_final_validation(t_wolf *w)
+t_bool			parser_final_validation(t_wolf *w)
 {
 	if (!validate_borders(w))
 		return (false);

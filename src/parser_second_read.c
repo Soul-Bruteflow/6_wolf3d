@@ -16,7 +16,7 @@
 ** 0-9, A-Z = 10-35, a-z = 36-63
 */
 
-Uint8	parse_map_tile(t_wolf *w, int x)
+static Uint8	parse_map_tile(t_wolf *w, int x)
 {
 	Uint8 tmp;
 
@@ -31,7 +31,7 @@ Uint8	parse_map_tile(t_wolf *w, int x)
 	return (tmp);
 }
 
-void	parser_second_read(t_wolf *w)
+void			parser_second_read(t_wolf *w)
 {
 	int i;
 

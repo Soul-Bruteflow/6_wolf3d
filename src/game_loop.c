@@ -12,7 +12,7 @@
 
 #include "wolf3d.h"
 
-t_bool	running(SDL_Event *event, const Uint8 **key_state)
+t_bool		running(SDL_Event *event, const Uint8 **key_state)
 {
 	SDL_Delay(1);
 	SDL_PollEvent(event);
@@ -22,7 +22,7 @@ t_bool	running(SDL_Event *event, const Uint8 **key_state)
 	return (true);
 }
 
-void	update_time(t_wolf *wolf)
+static void	update_time(t_wolf *wolf)
 {
 	char	*tmp;
 
@@ -43,7 +43,7 @@ void	update_time(t_wolf *wolf)
 	wolf->fps_counter++;
 }
 
-void	raycast_init(t_wolf *wolf)
+static void	raycast_init(t_wolf *wolf)
 {
 	wolf->pos_x = wolf->map_width / 2;
 	wolf->pos_y = wolf->map_height / 2;
@@ -55,7 +55,7 @@ void	raycast_init(t_wolf *wolf)
 	wolf->old_time = 0;
 }
 
-void	game_loop(t_wolf *wolf)
+void		game_loop(t_wolf *wolf)
 {
 	raycast_init(wolf);
 	wolf_font_init(wolf);

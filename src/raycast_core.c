@@ -12,7 +12,7 @@
 
 #include "wolf3d.h"
 
-void	ray_init(t_wolf *w)
+static void	ray_init(t_wolf *w)
 {
 	w->camera_x = 2 * w->ray_per_x / (float)w->width - 1;
 	w->ray_pos_x = w->pos_x;
@@ -28,7 +28,7 @@ void	ray_init(t_wolf *w)
 	w->hit = 0;
 }
 
-void	step_init(t_wolf *w)
+static void	step_init(t_wolf *w)
 {
 	if (w->ray_dir_x < 0)
 	{
@@ -52,7 +52,7 @@ void	step_init(t_wolf *w)
 	}
 }
 
-void	wolf_dda(t_wolf *w)
+static void	wolf_dda(t_wolf *w)
 {
 	while (w->hit == 0)
 	{
@@ -73,7 +73,7 @@ void	wolf_dda(t_wolf *w)
 	}
 }
 
-void	final_calculations(t_wolf *w)
+static void	final_calculations(t_wolf *w)
 {
 	if (w->side == 0)
 		w->perp_wall_dist = (w->mapx - w->ray_pos_x +
@@ -90,7 +90,7 @@ void	final_calculations(t_wolf *w)
 		w->draw_end = w->height - 1;
 }
 
-void	raycast_core(t_wolf *wolf)
+void		raycast_core(t_wolf *wolf)
 {
 	wolf->ray_per_x = -1;
 	while (wolf->ray_per_x++ < wolf->width)

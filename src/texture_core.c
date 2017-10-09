@@ -12,7 +12,7 @@
 
 #include "wolf3d.h"
 
-void		wolf_texture_calculate(t_wolf *w)
+void			wolf_texture_calculate(t_wolf *w)
 {
 	w->tex_num = w->world_map[w->mapx][w->mapy] - 1;
 	if (w->side == 0)
@@ -27,7 +27,7 @@ void		wolf_texture_calculate(t_wolf *w)
 		w->tex_x = TEX_WIDTH - w->tex_x - 1;
 }
 
-static void	pixel_buff(t_wolf *w, unsigned int off, unsigned int off1)
+static void		pixel_buff(t_wolf *w, unsigned int off, unsigned int off1)
 {
 	w->draw_buffer[off + 0] = w->wall_buffer[w->tex_num][off1 + 0];
 	w->draw_buffer[off + 1] = w->wall_buffer[w->tex_num][off1 + 1];
@@ -35,7 +35,7 @@ static void	pixel_buff(t_wolf *w, unsigned int off, unsigned int off1)
 	w->draw_buffer[off + 3] = w->wall_buffer[w->tex_num][off1 + 3];
 }
 
-void		draw_texture(t_wolf *w)
+void			draw_texture(t_wolf *w)
 {
 	unsigned int	off;
 	unsigned int	off1;
@@ -61,7 +61,7 @@ void		draw_texture(t_wolf *w)
 	}
 }
 
-void		assign_textures(t_wolf *w)
+static void		assign_textures(t_wolf *w)
 {
 	int		i;
 
@@ -83,7 +83,7 @@ void		assign_textures(t_wolf *w)
 	}
 }
 
-void		texture_core(t_wolf *w)
+void			texture_core(t_wolf *w)
 {
 	int		bpp;
 	int		i;

@@ -12,7 +12,7 @@
 
 #include "wolf3d.h"
 
-void	print_error_and_exit(const char *error_text, Uint8 sdl)
+static void	print_error_and_exit(const char *error_text, Uint8 sdl)
 {
 	const char *buf;
 
@@ -27,7 +27,7 @@ void	print_error_and_exit(const char *error_text, Uint8 sdl)
 	exit(0);
 }
 
-void	wolf_error(Uint8 error_code)
+void		wolf_error(Uint8 error_code)
 {
 	if (error_code == USSAGE_ERROR)
 		print_error_and_exit("Usage: ./wolf3d <mapname>", 0);
