@@ -27,6 +27,7 @@ OBJ	=	floor_ceiling_core.o \
 		ft_free_2d_array.o \
 		ft_malloc_2d_array.o \
 		ft_noise.o \
+		ft_pixel_buff.o \
 		ft_xor_swap.o \
 		game_loop.o \
 		get_next_line.o \

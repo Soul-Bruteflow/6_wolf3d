@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_pixel_buff.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/10 13:54:57 by mvlad             #+#    #+#             */
+/*   Updated: 2017/10/10 14:25:22 by mvlad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "wolf3d.h"
 
-void	ft_pixel_buff(t_wolf *w, unsigned int off, unsigned int off1, unsigned int i)
+void	ft_pixel_buff(t_wolf *w, unsigned int off,
+	unsigned int off1, unsigned int i)
 {
 	if (off1 >= 0 && off1 <= ((TEX_WIDTH - 1) * (TEX_WIDTH - 1) * BITS)
 	&& off >= 0 && off <= ((WIDTH - 1) * (HEIGHT - 1) * BITS))
@@ -12,7 +25,8 @@ void	ft_pixel_buff(t_wolf *w, unsigned int off, unsigned int off1, unsigned int 
 	}
 }
 
-void	ft_pixel_buff_shade(t_wolf *w, unsigned int off, unsigned int off1, unsigned int i)
+void	ft_pixel_buff_shade(t_wolf *w, unsigned int off,
+	unsigned int off1, unsigned int i)
 {
 	if (off1 >= 0 && off1 <= ((TEX_WIDTH - 1) * (TEX_WIDTH - 1) * BITS)
 	&& off >= 0 && off <= ((WIDTH - 1) * (HEIGHT - 1) * BITS))
