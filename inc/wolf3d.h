@@ -31,6 +31,9 @@
 # define TEXTURE_ERROR 4
 # define TEX_WIDTH 128
 # define TEX_HEIGHT 128
+# define WIDTH 800
+# define HEIGHT 600
+# define BITS 4
 # define TEX_NBR 10
 
 /*
@@ -218,11 +221,14 @@ t_bool				parser_final_validation(t_wolf *w);
 /*
 ** Support
 */
+void				ft_pixel_buff(t_wolf *w, unsigned int off,
+					unsigned int off1, unsigned int i);
+void				ft_pixel_buff_shade(t_wolf *w, unsigned int off,
+					unsigned int off1, unsigned int i);
 void				wolf_font_init(t_wolf *w);
 void				**ft_malloc_2d_array(Uint8 type_size, size_t x, size_t y);
 void				ft_free_2d_array(void **array, size_t y);
 void				ft_xor_swap(int *a, int *b);
-
 /*
 ** Textures
 */

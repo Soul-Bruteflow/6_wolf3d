@@ -27,14 +27,6 @@ void			wolf_texture_calculate(t_wolf *w)
 		w->tex_x = TEX_WIDTH - w->tex_x - 1;
 }
 
-static void		pixel_buff(t_wolf *w, unsigned int off, unsigned int off1)
-{
-	w->draw_buffer[off + 0] = w->wall_buffer[w->tex_num][off1 + 0];
-	w->draw_buffer[off + 1] = w->wall_buffer[w->tex_num][off1 + 1];
-	w->draw_buffer[off + 2] = w->wall_buffer[w->tex_num][off1 + 2];
-	w->draw_buffer[off + 3] = w->wall_buffer[w->tex_num][off1 + 3];
-}
-
 void			draw_texture(t_wolf *w)
 {
 	unsigned int	off;
@@ -48,15 +40,8 @@ void			draw_texture(t_wolf *w)
 		* 128) / w->line_height;
 		off = (unsigned int)(800 * 4 * y) + w->ray_per_x * 4;
 		off1 = (unsigned int)(128 * 4 * w->tex_y) + w->tex_x * 4;
-		if (w->side == 1)
-		{
-			w->draw_buffer[off + 0] = w->wall_buffer[w->tex_num][off1 + 0] / 2;
-			w->draw_buffer[off + 1] = w->wall_buffer[w->tex_num][off1 + 1] / 2;
-			w->draw_buffer[off + 2] = w->wall_buffer[w->tex_num][off1 + 2] / 2;
-			w->draw_buffer[off + 3] = w->wall_buffer[w->tex_num][off1 + 3] / 2;
-		}
-		else
-			pixel_buff(w, off, off1);
+		ft_pixel_buff_shade(w, off, off1, (unsigned int)w->tex_num);
+		ft_pixel_buff(w, off, off1, (unsigned int)w->tex_num);
 		y++;
 	}
 }

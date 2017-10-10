@@ -12,18 +12,10 @@
 
 #include "wolf3d.h"
 
-static void	pixel_buff(t_wolf *w, unsigned int offs, unsigned int offs1, int i)
-{
-	w->draw_buffer[offs + 0] = (Uint8)(w->wall_buffer[i][offs1 + 0] / 2);
-	w->draw_buffer[offs + 1] = (Uint8)(w->wall_buffer[i][offs1 + 1] / 2);
-	w->draw_buffer[offs + 2] = (Uint8)(w->wall_buffer[i][offs1 + 2] / 2);
-	w->draw_buffer[offs + 3] = (Uint8)(w->wall_buffer[i][offs1 + 3] / 2);
-}
-
 void		floor_celing_draw(t_wolf *w)
 {
-	unsigned int	offs;
-	unsigned int	offs1;
+	unsigned int	off;
+	unsigned int	off1;
 	int				y;
 
 	y = w->draw_end + 1;
@@ -38,11 +30,11 @@ void		floor_celing_draw(t_wolf *w)
 		* w->floor_y_wall + (1.0f - w->weight) * w->pos_y;
 		w->floor_tex_x = (int)(w->current_floot_x * TEX_WIDTH) % TEX_WIDTH;
 		w->floor_tex_y = (int)(w->current_floot_y * TEX_HEIGHT) % TEX_HEIGHT;
-		offs = (unsigned int)(800 * 4 * y) + w->ray_per_x * 4;
-		offs1 = (unsigned int)(128 * 4 * w->floor_tex_y) + w->floor_tex_x * 4;
-		pixel_buff(w, offs, offs1, 3);
-		offs = (unsigned int)(800 * 4 * (w->height - y)) + w->ray_per_x * 4;
-		pixel_buff(w, offs, offs1, 4);
+		off = (unsigned int)(800 * 4 * y) + w->ray_per_x * 4;
+		off1 = (unsigned int)(128 * 4 * w->floor_tex_y) + w->floor_tex_x * 4;
+		ft_pixel_buff_shade(w, off, off1, 3);
+		off = (unsigned int)(800 * 4 * (w->height - y)) + w->ray_per_x * 4;
+		ft_pixel_buff_shade(w, off, off1, 4);
 		y++;
 	}
 }
