@@ -25,7 +25,7 @@ static Uint8	parse_map_tile(t_wolf *w, int x)
 		tmp -= '0';
 	else
 	{
-		tmp = 48;
+		tmp = 49;
 		tmp -= '0';
 	}
 	return (tmp);

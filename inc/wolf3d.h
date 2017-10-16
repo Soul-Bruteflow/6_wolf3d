@@ -6,7 +6,7 @@
 /*   By: mvlad <mvlad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 13:21:31 by mvlad             #+#    #+#             */
-/*   Updated: 2017/10/07 14:30:53 by mvlad            ###   ########.fr       */
+/*   Updated: 2017/10/16 16:25:14 by mvlad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include "libft.h"
 # include "get_next_line.h"
 # include <math.h>
-# include <SDL2/SDL.h>
-# include <SDL2_image/SDL_image.h>
-# include <SDL2_ttf/SDL_ttf.h>
-# include <SDL2_mixer/SDL_mixer.h>
+# include <SDL.h>
+# include <SDL_image.h>
+# include <SDL_ttf.h>
+# include <SDL_mixer.h>
 
 /*
 ** SDL
